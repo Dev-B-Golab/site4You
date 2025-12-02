@@ -1,0 +1,31 @@
+services:
+  web:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  site4you:
+    image: webdevops/php-nginx:8.2
+    container_name: site4you
+    volumes:
+      - ./app:/app
+    environment:
+      - WEB_DOCUMENT_ROOT=/app/app/public
+      - VIRTUAL_HOST=site4you.local
+      - PHP_DISPLAY_ERRORS=1
+
+  db:
+    image: mysql:8.0
+    container_name: site4you_db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: site4you_db
+      MYSQL_USER: site4you_user
+      MYSQL_PASSWORD: userpassword
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
