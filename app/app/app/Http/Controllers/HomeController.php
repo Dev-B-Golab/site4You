@@ -3,12 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactFormMail;
 
 class HomeController extends Controller
 {
     public function index()
     {
         return view('home');
+    }
+
+    public function service($slug)
+    {
+        $services = ['websites', 'ecommerce', 'webapps', 'seo', 'responsive', 'support'];
+        
+        if (!in_array($slug, $services)) {
+            abort(404);
+        }
+        
+        return view('services.show', ['service' => $slug]);
     }
 
     public function contact(Request $request)
@@ -20,8 +33,9 @@ class HomeController extends Controller
             'message' => 'required|string|max:2000',
         ]);
 
-        // Tutaj można dodać logikę wysyłania maila lub zapisywania do bazy
+        // Wysyłanie maila
+        Mail::to(config('site.email'))->send(new ContactFormMail($validated));
 
-        return back()->with('success', 'Dziękujemy za wiadomość! Skontaktujemy się wkrótce.');
+        return redirect()->route('contact.success');
     }
 }

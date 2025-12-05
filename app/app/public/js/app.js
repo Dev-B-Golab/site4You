@@ -32,28 +32,59 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Active section highlighting
 document.addEventListener('DOMContentLoaded', function() {
+    // Nie uruchamiaj na podstronach usług
+    if (window.location.pathname.indexOf('/uslugi/') !== -1) {
+        return;
+    }
+    
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    const navLinks = document.querySelectorAll('.navbar-nav > .nav-item > .nav-link');
     
     if (sections.length && navLinks.length) {
-        window.addEventListener('scroll', function() {
-            const scrollPos = window.scrollY + 100;
+        const highlightNav = function() {
+            const scrollPos = window.scrollY + 150;
+            let currentSection = null;
             
+            // Znajdź aktualną sekcję
             sections.forEach(function(section) {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.offsetHeight;
-                const sectionId = section.getAttribute('id');
                 
                 if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                    navLinks.forEach(function(link) {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === '#' + sectionId) {
-                            link.classList.add('active');
-                        }
-                    });
+                    currentSection = section.getAttribute('id');
                 }
             });
-        });
+            
+            // Usuń active ze wszystkich
+            navLinks.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            
+            // Podświetl odpowiedni link
+            if (currentSection) {
+                navLinks.forEach(function(link) {
+                    const dataScroll = link.getAttribute('data-scroll') || '';
+                    const linkText = link.textContent.trim();
+                    
+                    // Mapowanie sekcji na data-scroll
+                    if (dataScroll === currentSection) {
+                        link.classList.add('active');
+                    }
+                    // Dla sekcji services - podświetl dropdown Usługi
+                    else if (currentSection === 'services' && (linkText.indexOf('Usługi') !== -1 || linkText.indexOf('Services') !== -1)) {
+                        link.classList.add('active');
+                    }
+                    // Dla sekcji intro - podświetl Home/Start
+                    else if (currentSection === 'intro' && dataScroll === 'intro') {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        };
+        
+        window.addEventListener('scroll', highlightNav);
+        // Uruchom przy załadowaniu strony
+        setTimeout(highlightNav, 100);
     }
 });
 
@@ -98,4 +129,49 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+
+// Scroll bez kotwicy w URL (data-scroll)
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[data-scroll]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            const sectionId = this.getAttribute('data-scroll');
+            const target = document.getElementById(sectionId);
+            
+            // Jeśli jesteśmy na tej samej stronie
+            if (target) {
+                e.preventDefault();
+                const navbarHeight = document.querySelector('.navbar-custom').offsetHeight || 0;
+                const targetPosition = target.offsetTop - navbarHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Aktualizuj URL bez hash (opcjonalnie)
+                history.replaceState(null, null, window.location.pathname);
+            } else {
+                // Jeśli jesteśmy na innej stronie, zapisz sekcję i przekieruj
+                sessionStorage.setItem('scrollToSection', sectionId);
+            }
+        });
+    });
+    
+    // Sprawdź czy trzeba scrollować po załadowaniu strony
+    const scrollTo = sessionStorage.getItem('scrollToSection');
+    if (scrollTo) {
+        sessionStorage.removeItem('scrollToSection');
+        const target = document.getElementById(scrollTo);
+        if (target) {
+            setTimeout(function() {
+                const navbarHeight = document.querySelector('.navbar-custom').offsetHeight || 0;
+                const targetPosition = target.offsetTop - navbarHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }, 100);
+        }
+    }
 });

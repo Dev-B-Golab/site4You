@@ -6,9 +6,10 @@ return [
     // NAWIGACJA
     // ========================================
     'nav' => [
-        'home' => 'Start',
+        'home' => 'Strona główna',
         'about' => 'O mnie',
         'services' => 'Usługi',
+        'all_services' => 'Wszystkie usługi',
         'faq' => 'FAQ',
         'contact' => 'Kontakt',
     ],
@@ -45,6 +46,13 @@ return [
     'services' => [
         'title' => 'Usługi',
         'subtitle' => 'Co mogę dla Ciebie zrobić',
+        'back' => 'Wróć do usług',
+        'read_more' => 'Dowiedz się więcej',
+        'cta' => 'Zamów usługę',
+        'includes' => 'Co zawiera usługa',
+        'contact_title' => 'Zainteresowany?',
+        'contact_subtitle' => 'Skontaktuj się ze mną, aby omówić szczegóły projektu',
+        'contact_btn' => 'Napisz do mnie',
         'items' => [
             'websites' => [
                 'title' => 'Strony wizytówki',
@@ -69,6 +77,86 @@ return [
             'support' => [
                 'title' => 'Wsparcie techniczne',
                 'desc' => 'Ciągła opieka nad stroną, aktualizacje i pomoc techniczna. Zawsze możesz na mnie liczyć.',
+            ],
+        ],
+        'details' => [
+            'websites' => [
+                'heading' => 'Profesjonalne strony wizytówki',
+                'subheading' => 'Twoja firma w internecie',
+                'content' => '<p class="mb-4">Strona wizytówka to podstawa obecności Twojej firmy w internecie. Tworzę nowoczesne, responsywne strony, które skutecznie prezentują Twoją działalność i przyciągają nowych klientów.</p><p class="mb-4">Każda strona jest zoptymalizowana pod kątem SEO, dzięki czemu Twoi potencjalni klienci łatwo Cię znajdą w wyszukiwarce Google.</p>',
+                'features' => [
+                    'Responsywny design (mobile-first)',
+                    'Optymalizacja SEO',
+                    'Formularz kontaktowy',
+                    'Integracja z social media',
+                    'Certyfikat SSL',
+                    'Szkolenie z obsługi',
+                ],
+            ],
+            'ecommerce' => [
+                'heading' => 'Sklepy internetowe',
+                'subheading' => 'Sprzedawaj online 24/7',
+                'content' => '<p class="mb-4">Tworzę funkcjonalne sklepy internetowe, które pomagają w sprzedaży produktów online. Integruję popularne systemy płatności i dostawy.</p><p class="mb-4">Każdy sklep jest wyposażony w intuicyjny panel administracyjny do zarządzania produktami, zamówieniami i klientami.</p>',
+                'features' => [
+                    'Zarządzanie produktami',
+                    'Integracja płatności (PayU, Przelewy24)',
+                    'Moduły dostawy (InPost, DPD, Poczta)',
+                    'Koszyk i proces zamówień',
+                    'Panel administracyjny',
+                    'Raporty sprzedaży',
+                ],
+            ],
+            'webapps' => [
+                'heading' => 'Aplikacje webowe',
+                'subheading' => 'Dedykowane rozwiązania dla Twojego biznesu',
+                'content' => '<p class="mb-4">Projektuję i tworzę dedykowane aplikacje webowe dopasowane do specyficznych potrzeb Twojej firmy. Od prostych narzędzi po złożone systemy zarządzania.</p><p class="mb-4">Wykorzystuję nowoczesne technologie, które gwarantują bezpieczeństwo, wydajność i skalowalność.</p>',
+                'features' => [
+                    'Indywidualny projekt',
+                    'Panel użytkownika',
+                    'API i integracje',
+                    'Baza danych',
+                    'Autoryzacja i uprawnienia',
+                    'Dokumentacja techniczna',
+                ],
+            ],
+            'seo' => [
+                'heading' => 'Pozycjonowanie SEO',
+                'subheading' => 'Bądź widoczny w Google',
+                'content' => '<p class="mb-4">Optymalizuję strony internetowe pod kątem wyszukiwarek, aby Twoja strona była widoczna dla potencjalnych klientów szukających Twoich usług.</p><p class="mb-4">Przeprowadzam audyt SEO, optymalizuję treści i strukturę strony oraz buduję profil linków.</p>',
+                'features' => [
+                    'Audyt SEO',
+                    'Optymalizacja treści',
+                    'Optymalizacja techniczna',
+                    'Link building',
+                    'Raportowanie pozycji',
+                    'Google Analytics & Search Console',
+                ],
+            ],
+            'responsive' => [
+                'heading' => 'Responsywność',
+                'subheading' => 'Idealna prezentacja na każdym urządzeniu',
+                'content' => '<p class="mb-4">Każda strona, którą tworzę, wygląda idealnie na wszystkich urządzeniach - komputerach, tabletach i smartfonach.</p><p class="mb-4">Stosuję podejście mobile-first, co gwarantuje najlepsze doświadczenia użytkowników mobilnych.</p>',
+                'features' => [
+                    'Design mobile-first',
+                    'Testy na różnych urządzeniach',
+                    'Optymalizacja szybkości ładowania',
+                    'Touch-friendly interface',
+                    'Responsywne obrazy',
+                    'Dostępność WCAG',
+                ],
+            ],
+            'support' => [
+                'heading' => 'Wsparcie techniczne',
+                'subheading' => 'Zawsze możesz na mnie liczyć',
+                'content' => '<p class="mb-4">Oferuję stałe wsparcie techniczne dla Twojej strony. Dbam o aktualizacje, bezpieczeństwo i poprawne działanie.</p><p class="mb-4">Szybko reaguję na zgłoszenia i pomagam rozwiązywać problemy.</p>',
+                'features' => [
+                    'Regularne aktualizacje',
+                    'Backup danych',
+                    'Monitoring dostępności',
+                    'Wsparcie email/telefon',
+                    'Drobne poprawki w cenie',
+                    'Raporty miesięczne',
+                ],
             ],
         ],
     ],
@@ -158,6 +246,14 @@ return [
             'message_placeholder' => 'Opisz swój projekt lub zadaj pytanie...',
             'submit' => 'Wyślij wiadomość',
             'success' => 'Dziękujemy za wiadomość! Skontaktujemy się wkrótce.',
+        ],
+        'success_page' => [
+            'title' => 'Wiadomość wysłana',
+            'heading' => 'Dziękujemy za wiadomość!',
+            'message' => 'Twoja wiadomość została pomyślnie wysłana. Odpowiemy najszybciej jak to możliwe.',
+            'response_time' => 'Zwykle odpowiadamy w ciągu 24 godzin',
+            'back_home' => 'Strona główna',
+            'view_services' => 'Zobacz usługi',
         ],
     ],
 

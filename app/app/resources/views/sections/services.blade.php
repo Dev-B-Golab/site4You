@@ -3,15 +3,15 @@
     Karty usług + proces tworzenia strony
 --}}
 
-<section id="services">
+<section id="services" aria-labelledby="services-title">
     <div class="container">
-        <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
-            <h2 class="section-title mx-auto" style="display: table;">{{ __('site.services.title') }}</h2>
+        <header class="text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+            <h2 id="services-title" class="section-title mx-auto" style="display: table;">{{ __('site.services.title') }}</h2>
             <p class="section-subtitle">{{ __('site.services.subtitle') }}</p>
-        </div>
+        </header>
 
         {{-- KARTY USŁUG --}}
-        <div class="row g-4 mb-5">
+        <div class="row g-4 mb-5" role="list" aria-label="Lista usług">
             @foreach([
                 ['icon' => 'bi-window', 'key' => 'websites'],
                 ['icon' => 'bi-cart3', 'key' => 'ecommerce'],
@@ -20,15 +20,20 @@
                 ['icon' => 'bi-phone', 'key' => 'responsive'],
                 ['icon' => 'bi-gear', 'key' => 'support'],
             ] as $index => $service)
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ $index * 100 }}">
-                <div class="card-custom">
-                    <div class="card-icon">
-                        <i class="bi {{ $service['icon'] }}"></i>
+            <article class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ $index * 100 }}" role="listitem">
+                <a href="{{ route('service.show', $service['key']) }}" class="text-decoration-none" aria-label="Dowiedz się więcej o usłudze: {{ __('site.services.items.' . $service['key'] . '.title') }}">
+                    <div class="card-custom">
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="bi {{ $service['icon'] }}"></i>
+                        </div>
+                        <h3 class="card-title">{{ __('site.services.items.' . $service['key'] . '.title') }}</h3>
+                        <p class="card-text">{{ __('site.services.items.' . $service['key'] . '.desc') }}</p>
+                        <span class="text-white mt-3 d-inline-block">
+                            {{ __('site.services.read_more') }} <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                        </span>
                     </div>
-                    <h4 class="card-title">{{ __('site.services.items.' . $service['key'] . '.title') }}</h4>
-                    <p class="card-text">{{ __('site.services.items.' . $service['key'] . '.desc') }}</p>
-                </div>
-            </div>
+                </a>
+            </article>
             @endforeach
         </div>
 

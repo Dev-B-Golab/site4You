@@ -1,15 +1,30 @@
-{{--
-|--------------------------------------------------------------------------
-| STRONA GŁÓWNA - HOME
-|--------------------------------------------------------------------------
-| Wszystkie dane edytujesz w pliku: config/site.php
-| Tutaj tylko łączysz sekcje w całość.
-|--------------------------------------------------------------------------
---}}
-
 @extends('layouts.app')
 
 @section('title', config('site.name') . ' - Profesjonalne Tworzenie Stron Internetowych')
+
+@section('meta_description', 'Tworzenie stron internetowych, sklepów online i aplikacji webowych. Nowoczesne, responsywne i zoptymalizowane pod SEO. Krosno i cała Polska.')
+
+@section('meta_keywords', 'tworzenie stron internetowych, strony www Krosno, sklepy internetowe, aplikacje webowe, SEO, responsywne strony, webdeveloper Krosno')
+
+@section('schema')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{ config('site.name') }} - Strona Główna",
+    "description": "Tworzenie stron internetowych, sklepów online i aplikacji webowych",
+    "url": "{{ route('home') }}",
+    "mainEntity": {
+        "@type": "Service",
+        "name": "Tworzenie stron internetowych",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "{{ config('site.name') }}"
+        }
+    }
+}
+</script>
+@endsection
 
 @section('content')
 

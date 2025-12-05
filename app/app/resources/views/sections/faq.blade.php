@@ -12,7 +12,7 @@
                 <p class="text-gray">
                     {{ __('site.faq.cta_text') }}
                 </p>
-                <a href="#contact" class="btn btn-custom mt-3">{{ __('site.faq.cta_button') }}</a>
+                <a href="{{ route('home') }}" data-scroll="contact" class="btn btn-custom mt-3">{{ __('site.faq.cta_button') }}</a>
             </div>
             <div class="col-lg-6 offset-lg-1" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                 <div class="accordion accordion-custom" id="faqAccordion">
