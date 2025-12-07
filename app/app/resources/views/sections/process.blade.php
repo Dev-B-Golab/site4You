@@ -10,7 +10,7 @@
         
         {{-- MIEJSCE NA ILUSTRACJĘ PROCESU --}}
         <div class="img-placeholder" style="height: 450px;">
-            <img src="{{ asset('img/intro-project.png') }}" alt="Code process">
+            <img src="{{ asset('img/project-website.png') }}" alt="Code process">
         </div>
     </div>
     <div class="col-lg-6 offset-lg-1">

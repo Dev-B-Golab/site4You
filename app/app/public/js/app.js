@@ -91,14 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // PureCounter initialization
 document.addEventListener('DOMContentLoaded', function() {
     if (typeof PureCounter !== 'undefined') {
-        new PureCounter({
-            selector: '.purecounter',
-            start: 0,
-            duration: 2,
-            delay: 10,
-            once: true,
-            repeat: false
-        });
+        new PureCounter();
     }
 });
 

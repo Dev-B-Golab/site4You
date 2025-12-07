@@ -34,7 +34,7 @@ return [
         'text1' => 'Hi! I\'m a web developer with a passion for creating beautiful and functional websites. For over X years, I\'ve been helping businesses and entrepreneurs build their online presence.',
         'text2' => 'I specialize in creating responsive business websites, e-commerce stores, and advanced web applications. I treat each project individually, paying attention to the smallest details.',
         'stats' => [
-            'projects' => 'Projects',
+            'line_code' => 'Written lines of code',
             'experience' => 'Years of experience',
             'satisfaction' => 'Satisfaction',
         ],
@@ -275,6 +275,59 @@ return [
         'hero_image' => 'Image or graphic',
         'profile_photo' => 'Your profile photo',
         'process_image' => 'Graphic or diagram',
+    ],
+
+    // ========================================
+    // ERROR PAGES
+    // ========================================
+    'errors' => [
+        'back_home' => 'Back to Home',
+        'contact_us' => 'Contact Us',
+        'try_again' => 'Try Again',
+        'refresh_page' => 'Refresh Page',
+        
+        '404' => [
+            'title' => 'Page Not Found',
+            'heading' => 'Oops! Page not found',
+            'message' => 'The page you are looking for might have been moved, deleted, or never existed.',
+            'suggestions_title' => 'What you can do:',
+            'suggestion_1' => 'Check the URL for typos',
+            'suggestion_2' => 'Go back to the homepage',
+            'suggestion_3' => 'Contact us if you think this is an error',
+        ],
+        
+        '403' => [
+            'title' => 'Access Denied',
+            'heading' => 'Access Forbidden',
+            'message' => 'You don\'t have permission to view this page. If you think this is an error, please contact us.',
+        ],
+        
+        '500' => [
+            'title' => 'Server Error',
+            'heading' => 'Oops! Something went wrong',
+            'message' => 'Sorry, an unexpected error occurred on our end. We\'re working to fix it.',
+            'info' => 'Our team has been notified and is working on resolving the issue.',
+        ],
+        
+        '503' => [
+            'title' => 'Service Unavailable',
+            'heading' => 'Website temporarily unavailable',
+            'message' => 'Sorry, we\'re currently performing maintenance. We\'ll be back soon!',
+            'info' => 'Maintenance usually takes a few minutes. Thank you for your patience.',
+        ],
+        
+        '419' => [
+            'title' => 'Session Expired',
+            'heading' => 'Your session has expired',
+            'message' => 'For security reasons, your session has expired. Please refresh the page and try again.',
+        ],
+        
+        '429' => [
+            'title' => 'Too Many Requests',
+            'heading' => 'Too many requests',
+            'message' => 'You\'ve made too many requests in a short period. Please wait a moment and try again.',
+            'info' => 'Please wait a few minutes before trying again.',
+        ],
     ],
 
 ];

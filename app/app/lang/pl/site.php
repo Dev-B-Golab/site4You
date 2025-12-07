@@ -18,9 +18,9 @@ return [
     // SEKCJA HERO
     // ========================================
     'hero' => [
-        'title' => 'Tworzę strony internetowe,',
-        'subtitle' => 'które sprzedają',
-        'description' => 'Nowoczesne, responsywne i zoptymalizowane pod kątem SEO strony internetowe. Pomagam firmom budować silną obecność w internecie i przyciągać nowych klientów.',
+        'title' => 'Strony internetowe',
+        'subtitle' => 'dopasowane do Twoich potrzeb!',
+        'description' => 'Nowoczesne, responsywne i zoptymalizowane pod kątem SEO. Każdy projekt jest wyjątkowy, tylko krok dzieli Cię od poprawy wizerunku firmy w internecie.',
         'btn_primary' => 'Rozpocznij projekt',
         'btn_secondary' => 'Zobacz usługi',
     ],
@@ -31,10 +31,10 @@ return [
     'about' => [
         'title' => 'O mnie',
         'subtitle' => 'Poznaj osobę stojącą za projektami',
-        'text1' => 'Cześć! Jestem webdeveloperem z pasją do tworzenia pięknych i funkcjonalnych stron internetowych. Od ponad X lat pomagam firmom i przedsiębiorcom budować ich obecność w internecie.',
+        'text1' => 'Cześć! Jestem Bartek, webdeveloper z pasją do tworzenia pięknych i funkcjonalnych stron internetowych. Pomagam firmom i przedsiębiorcom budować ich obecność w internecie.',
         'text2' => 'Specjalizuję się w tworzeniu responsywnych stron wizytówek, sklepów internetowych oraz zaawansowanych aplikacji webowych. Każdy projekt traktuję indywidualnie, dbając o najmniejsze szczegóły.',
         'stats' => [
-            'projects' => 'Projektów',
+            'line_code' => 'Napisanych linii kodu',
             'experience' => 'Lat doświadczenia',
             'satisfaction' => 'Satysfakcji',
         ],
@@ -56,7 +56,7 @@ return [
         'items' => [
             'websites' => [
                 'title' => 'Strony wizytówki',
-                'desc' => 'Profesjonalne strony prezentujące Twoją firmę. Idealne rozwiązanie dla małych i średnich przedsiębiorstw.',
+                'desc' => 'Profesjonalne strony prezentujące Twoją firmę. Idealne rozwiązanie aby pokazać się na szerszą skale.',
             ],
             'ecommerce' => [
                 'title' => 'Sklepy internetowe',
@@ -76,7 +76,7 @@ return [
             ],
             'support' => [
                 'title' => 'Wsparcie techniczne',
-                'desc' => 'Ciągła opieka nad stroną, aktualizacje i pomoc techniczna. Zawsze możesz na mnie liczyć.',
+                'desc' => 'Ciągła opieka nad stroną, aktualizacje i pomoc techniczna.',
             ],
         ],
         'details' => [
@@ -122,7 +122,7 @@ return [
             'seo' => [
                 'heading' => 'Pozycjonowanie SEO',
                 'subheading' => 'Bądź widoczny w Google',
-                'content' => '<p class="mb-4">Optymalizuję strony internetowe pod kątem wyszukiwarek, aby Twoja strona była widoczna dla potencjalnych klientów szukających Twoich usług.</p><p class="mb-4">Przeprowadzam audyt SEO, optymalizuję treści i strukturę strony oraz buduję profil linków.</p>',
+                'content' => '<p class="mb-4">Optymalizacja dla wyszukiwarek jest kluczową funkcją dla strony internetowej aby była widoczna dla potencjalnych klientów.</p><p class="mb-4">Przeprowadzam audyt SEO, optymalizuję treści i strukturę strony oraz buduję profil linków.</p>',
                 'features' => [
                     'Audyt SEO',
                     'Optymalizacja treści',
@@ -135,7 +135,7 @@ return [
             'responsive' => [
                 'heading' => 'Responsywność',
                 'subheading' => 'Idealna prezentacja na każdym urządzeniu',
-                'content' => '<p class="mb-4">Każda strona, którą tworzę, wygląda idealnie na wszystkich urządzeniach - komputerach, tabletach i smartfonach.</p><p class="mb-4">Stosuję podejście mobile-first, co gwarantuje najlepsze doświadczenia użytkowników mobilnych.</p>',
+                'content' => '<p class="mb-4">Rozumiem jak ważna jest responsywność strony internetowej w czasach kiedy większość osób korzysta z urządzeń mobilnych.</p><p class="mb-4">Moje strony są projektowane z myślą o wszystkich typach urządzeń, zapewniając doskonałe doświadczenia użytkownikom na każdym ekranie.</p>',
                 'features' => [
                     'Design mobile-first',
                     'Testy na różnych urządzeniach',
@@ -170,7 +170,7 @@ return [
         'steps' => [
             [
                 'title' => 'Konsultacja i analiza',
-                'desc' => 'Poznajemy Twoje potrzeby, cele biznesowe i oczekiwania. Analizuję konkurencję i określamy zakres projektu.',
+                'desc' => 'Poznaje Twoje potrzeby, cele biznesowe i oczekiwania. Analizuję konkurencję i określamy zakres projektu.',
             ],
             [
                 'title' => 'Projekt graficzny',
@@ -202,11 +202,11 @@ return [
         'items' => [
             [
                 'question' => 'Ile kosztuje stworzenie strony internetowej?',
-                'answer' => 'Cena zależy od zakresu projektu. Prosta strona wizytówka to koszt od X zł, natomiast rozbudowany sklep internetowy od Y zł. Każdy projekt wyceniam indywidualnie po poznaniu Twoich potrzeb.',
+                'answer' => 'Każdy projekt wyceniam indywidualnie po poznaniu Twoich potrzeb i analizując realny czas realizacji. Nie bój się, ze mną nie zbankrutujesz! 😀',
             ],
             [
                 'question' => 'Jak długo trwa realizacja projektu?',
-                'answer' => 'Czas realizacji zależy od złożoności projektu. Prosta strona wizytówka to zazwyczaj 1-2 tygodnie, natomiast sklep internetowy lub aplikacja webowa może zająć od 4 do 8 tygodni.',
+                'answer' => 'Czas realizacji zależy od złożoności projektu. Prosta strona wizytówka to zazwyczaj 1-2 tygodnie, natomiast sklep internetowy lub aplikacja webowa może zająć od 4 do 8 tygodni. Wszystko ustalam indywidualnie podczas konsultacji.',
             ],
             [
                 'question' => 'Czy będę mógł samodzielnie edytować stronę?',
@@ -214,7 +214,7 @@ return [
             ],
             [
                 'question' => 'Czy zajmujesz się też hostingiem i domeną?',
-                'answer' => 'Tak, pomagam w wyborze odpowiedniego hostingu i rejestracji domeny. Mogę też zająć się całą konfiguracją techniczną, abyś nie musiał martwić się szczegółami.',
+                'answer' => 'Tak, pomagam w wyborze odpowiedniego hostingu i rejestracji domeny. Mogę też zająć się całą konfiguracją techniczną, abyś nie musiał martwić się szczegółami. Jedyne co musisz zrobić to skupić się na prowadzeniu swojego biznesu.',
             ],
             [
                 'question' => 'Co jeśli po wdrożeniu będę potrzebował zmian?',
@@ -229,7 +229,7 @@ return [
     'contact' => [
         'title' => 'Kontakt',
         'subtitle' => 'Rozpocznijmy współpracę',
-        'description' => 'Masz pomysł na projekt? Chętnie porozmawiam o Twoich potrzebach i zaproponuję najlepsze rozwiązanie. Napisz do mnie!',
+        'description' => 'Masz pomysł na projekt? Chętnie porozmawiam o Twoich potrzebach i zaproponuję najlepsze rozwiązanie. Napisz do mnie i umów się na bezpłatną konsultację!',
         'labels' => [
             'email' => 'Email',
             'phone' => 'Telefon',
@@ -275,6 +275,59 @@ return [
         'hero_image' => 'Zdjęcie lub grafika',
         'profile_photo' => 'Twoje zdjęcie profilowe',
         'process_image' => 'Grafika lub schemat',
+    ],
+
+    // ========================================
+    // STRONY BŁĘDÓW
+    // ========================================
+    'errors' => [
+        'back_home' => 'Strona główna',
+        'contact_us' => 'Kontakt',
+        'try_again' => 'Spróbuj ponownie',
+        'refresh_page' => 'Odśwież stronę',
+        
+        '404' => [
+            'title' => 'Nie znaleziono strony',
+            'heading' => 'Ups! Strona nie została znaleziona',
+            'message' => 'Strona, której szukasz, mogła zostać przeniesiona, usunięta lub nigdy nie istniała.',
+            'suggestions_title' => 'Co możesz zrobić:',
+            'suggestion_1' => 'Sprawdź poprawność adresu URL',
+            'suggestion_2' => 'Wróć na stronę główną',
+            'suggestion_3' => 'Skontaktuj się z nami, jeśli uważasz, że to błąd',
+        ],
+        
+        '403' => [
+            'title' => 'Brak dostępu',
+            'heading' => 'Dostęp zabroniony',
+            'message' => 'Nie masz uprawnień do wyświetlenia tej strony. Jeśli uważasz, że to błąd, skontaktuj się z nami.',
+        ],
+        
+        '500' => [
+            'title' => 'Błąd serwera',
+            'heading' => 'Ups! Coś poszło nie tak',
+            'message' => 'Przepraszamy, wystąpił nieoczekiwany błąd po naszej stronie. Pracujemy nad jego naprawą.',
+            'info' => 'Nasz zespół został powiadomiony o problemie i pracuje nad jego rozwiązaniem.',
+        ],
+        
+        '503' => [
+            'title' => 'Serwis niedostępny',
+            'heading' => 'Strona tymczasowo niedostępna',
+            'message' => 'Przepraszamy, obecnie prowadzimy prace konserwacyjne. Wrócimy wkrótce!',
+            'info' => 'Zazwyczaj prace trwają kilka minut. Dziękujemy za cierpliwość.',
+        ],
+        
+        '419' => [
+            'title' => 'Sesja wygasła',
+            'heading' => 'Twoja sesja wygasła',
+            'message' => 'Ze względów bezpieczeństwa Twoja sesja wygasła. Odśwież stronę i spróbuj ponownie.',
+        ],
+        
+        '429' => [
+            'title' => 'Zbyt wiele żądań',
+            'heading' => 'Zbyt wiele żądań',
+            'message' => 'Wykonałeś zbyt wiele żądań w krótkim czasie. Poczekaj chwilę i spróbuj ponownie.',
+            'info' => 'Poczekaj kilka minut przed ponowną próbą.',
+        ],
     ],
 
 ];

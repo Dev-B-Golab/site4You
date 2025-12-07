@@ -36,6 +36,8 @@
                     <li><a href="{{ route('service.show', 'ecommerce') }}">{{ __('site.services.items.ecommerce.title') }}</a></li>
                     <li><a href="{{ route('service.show', 'webapps') }}">{{ __('site.services.items.webapps.title') }}</a></li>
                     <li><a href="{{ route('service.show', 'seo') }}">{{ __('site.services.items.seo.title') }}</a></li>
+                    <li><a href="{{ route('service.show', 'responsive') }}">{{ __('site.services.items.responsive.title') }}</a></li>
+                    <li><a href="{{ route('service.show', 'support') }}">{{ __('site.services.items.support.title') }}</a></li>
                 </ul>
             </div>
             

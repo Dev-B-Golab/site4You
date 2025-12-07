@@ -25,8 +25,8 @@
                 {{-- STATYSTYKI z PureCounter --}}
                 <div class="row mt-4" role="list" aria-label="Statystyki">
                     @foreach([
-                        ['start' => 0, 'end' => 50, 'suffix' => '+', 'key' => 'projects'],
-                        ['start' => 0, 'end' => 5, 'suffix' => '+', 'key' => 'experience'],
+                        ['start' => 0, 'end' => 1000000, 'suffix' => '+', 'key' => 'line_code'],
+                        ['start' => 0, 'end' => 3, 'suffix' => '+', 'key' => 'experience'],
                         ['start' => 0, 'end' => 100, 'suffix' => '%', 'key' => 'satisfaction'],
                     ] as $stat)
                     <div class="col-4 text-center" role="listitem">
@@ -34,9 +34,7 @@
                             <span class="purecounter"
                                   data-purecounter-start="{{ $stat['start'] }}"
                                   data-purecounter-end="{{ $stat['end'] }}"
-                                  data-purecounter-suffix="{{ $stat['suffix'] }}"
-                                  data-purecounter-duration="2"
-                                  aria-label="{{ $stat['end'] }}{{ $stat['suffix'] }} {{ __('site.about.stats.' . $stat['key']) }}">0</span>
+                                  data-purecounter-duration="2">0</span>{{ $stat['suffix'] }}
                         </h3>
                         <p class="stat-label">{{ __('site.about.stats.' . $stat['key']) }}</p>
                     </div>
