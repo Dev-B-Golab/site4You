@@ -28,7 +28,7 @@
                         </div>
                         <h3 class="card-title">{{ __('site.services.items.' . $service['key'] . '.title') }}</h3>
                         <p class="card-text">{{ __('site.services.items.' . $service['key'] . '.desc') }}</p>
-                        <span class="text-white mt-3 d-inline-block">
+                        <span class="card-read-more">
                             {{ __('site.services.read_more') }} <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
                         </span>
                     </div>

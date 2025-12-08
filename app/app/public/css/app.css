@@ -274,6 +274,9 @@ section { padding: 100px 0; }
     padding: 2rem;
     transition: all 0.3s ease;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .card-custom:hover {
@@ -295,7 +298,23 @@ section { padding: 100px 0; }
 
 .card-icon i { font-size: 1.5rem; color: var(--text-white); }
 .card-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-white); }
-.card-text { color: var(--text-gray); }
+.card-text { color: var(--text-gray); flex-grow: 1; }
+
+.card-read-more {
+    color: var(--text-white);
+    margin-top: auto;
+    padding-top: 1rem;
+    text-align: right;
+    transition: all 0.3s ease;
+}
+
+.card-read-more i {
+    transition: transform 0.3s ease;
+}
+
+.card-custom:hover .card-read-more i {
+    transform: translateX(5px);
+}
 
 /* ========================================
    KROKI PROCESU
