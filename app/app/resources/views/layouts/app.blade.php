@@ -19,7 +19,7 @@
     <meta name="description" content="@yield('meta_description', config('site.description'))">
     <meta name="keywords" content="@yield('meta_keywords', 'tworzenie stron internetowych, strony www, sklepy internetowe, aplikacje webowe, SEO, responsywne strony, Krosno, Polska')">
     <meta name="author" content="{{ config('site.name') }}">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="@yield('robots', 'index, follow')">
     <link rel="canonical" href="{{ url()->current() }}">
     
     {{-- OPEN GRAPH / FACEBOOK --}}

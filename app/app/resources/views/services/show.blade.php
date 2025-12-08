@@ -33,12 +33,14 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1000">
-                <a href="{{ route('home') }}#services" class="btn btn-outline-custom mb-4">
-                    <i class="bi bi-arrow-left me-2"></i>{{ __('site.services.back') }}
-                </a>
+                <x-button href="{{ route('home') }}" variant="outline" icon="bi-arrow-left" data-scroll="services" class="mb-4">
+                    {{ __('site.services.back') }}
+                </x-button>
                 <h1 class="hero-title">{{ __('site.services.items.' . $service . '.title') }}</h1>
                 <p class="hero-subtitle">{{ __('site.services.items.' . $service . '.desc') }}</p>
-                <a href="#" data-scroll="contact-section" class="btn btn-custom mt-3">{{ __('site.services.cta') }}</a>
+                <x-button href="#contact-section" variant="primary" class="mt-3">
+                    {{ __('site.services.cta') }}
+                </x-button>
             </div>
         </div>
     </div>
@@ -49,8 +51,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="section-title">{{ __('site.services.details.' . $service . '.heading') }}</h2>
-                <p class="section-subtitle">{{ __('site.services.details.' . $service . '.subheading') }}</p>
+                <x-section-header 
+                    :title="__('site.services.details.' . $service . '.heading')"
+                    :subtitle="__('site.services.details.' . $service . '.subheading')"
+                    :centered="false" />
                 
                 <div class="text-gray">
                     {!! __('site.services.details.' . $service . '.content') !!}
@@ -59,14 +63,7 @@
             <div class="col-lg-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                 <div class="card-custom">
                     <h4 class="card-title mb-4">{{ __('site.services.includes') }}</h4>
-                    <ul class="list-unstyled">
-                        @foreach(__('site.services.details.' . $service . '.features') as $feature)
-                        <li class="mb-3">
-                            <i class="bi bi-check-circle text-white me-2"></i>
-                            <span class="text-gray">{{ $feature }}</span>
-                        </li>
-                        @endforeach
-                    </ul>
+                    <x-feature-list :features="__('site.services.details.' . $service . '.features')" />
                 </div>
             </div>
         </div>
@@ -78,15 +75,17 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="section-title mx-auto" style="display: table;">{{ __('site.services.contact_title') }}</h2>
-                <p class="section-subtitle">{{ __('site.services.contact_subtitle') }}</p>
+                <x-section-header 
+                    :title="__('site.services.contact_title')"
+                    :subtitle="__('site.services.contact_subtitle')"
+                    :centered="true" />
                 <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-                    <a href="{{ route('home') }}#contact" class="btn btn-custom">
-                        <i class="bi bi-envelope me-2"></i>{{ __('site.services.contact_btn') }}
-                    </a>
-                    <a href="tel:{{ config('site.phone') }}" class="btn btn-outline-custom">
-                        <i class="bi bi-telephone me-2"></i>{{ config('site.phone') }}
-                    </a>
+                    <x-button href="{{ route('home') }}" variant="primary" icon="bi-envelope" data-scroll="contact">
+                        {{ __('site.services.contact_btn') }}
+                    </x-button>
+                    <x-button href="tel:{{ config('site.phone') }}" variant="outline" icon="bi-telephone">
+                        {{ config('site.phone') }}
+                    </x-button>
                 </div>
             </div>
         </div>

@@ -1,29 +1,28 @@
 {{-- 
     KOMPONENT: Link nawigacyjny
-    Użycie: <x-nav-link href="#about" :active="true">O nas</x-nav-link>
+    Użycie: <x-nav-link scroll="about">O nas</x-nav-link>
     
     Props:
-    - href: adres URL lub sekcja (#about)
+    - href: adres URL (opcjonalny)
+    - scroll: sekcja do scrollowania (opcjonalny, np. "about", "services")
     - active: czy aktywny (domyślnie: false)
-    - scroll: czy to link do sekcji na stronie (domyślnie: auto-detect #)
     - dropdown: czy to dropdown toggle (domyślnie: false)
 --}}
 
 @props([
-    'href' => '#',
-    'active' => false,
+    'href' => null,
     'scroll' => null,
+    'active' => false,
     'dropdown' => false,
 ])
 
 @php
-$isScroll = $scroll ?? str_starts_with($href, '#');
-$sectionId = $isScroll ? ltrim($href, '#') : null;
+$linkHref = $href ?? ($scroll ? route('home') : '#');
 @endphp
 
 @if($dropdown)
 <a class="nav-link dropdown-toggle {{ $active ? 'active' : '' }}" 
-   href="{{ $href }}" 
+   href="#" 
    role="button" 
    data-bs-toggle="dropdown" 
    aria-expanded="false"
@@ -32,8 +31,8 @@ $sectionId = $isScroll ? ltrim($href, '#') : null;
 </a>
 @else
 <a class="nav-link {{ $active ? 'active' : '' }}" 
-   href="{{ $href }}"
-   @if($isScroll && $sectionId) data-scroll="{{ $sectionId }}" @endif
+   href="{{ $linkHref }}"
+   @if($scroll) data-scroll="{{ $scroll }}" @endif
    {{ $attributes }}>
     {{ $slot }}
 </a>

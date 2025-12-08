@@ -22,11 +22,11 @@
     'value' => null,
 ])
 
-<div class="mb-3">
+<div {{ $attributes->except(['class'])->merge() }}>
     @if($label)
     <label for="{{ $name }}" class="form-label">
         {{ $label }}
-        @if($required) <span class="text-danger">*</span> @endif
+        @if($required) *@endif
     </label>
     @endif
     
@@ -34,20 +34,22 @@
     <textarea 
         name="{{ $name }}" 
         id="{{ $name }}" 
-        class="form-control" 
+        class="form-control form-control-custom @error($name) is-invalid @enderror" 
         rows="{{ $rows }}" 
         placeholder="{{ $placeholder }}"
-        {{ $required ? 'required' : '' }}
-        {{ $attributes }}>{{ $value }}</textarea>
+        {{ $required ? 'required' : '' }}>{{ old($name, $value) }}</textarea>
     @else
     <input 
         type="{{ $type }}" 
         name="{{ $name }}" 
         id="{{ $name }}" 
-        class="form-control" 
+        class="form-control form-control-custom @error($name) is-invalid @enderror" 
         placeholder="{{ $placeholder }}"
-        value="{{ $value }}"
-        {{ $required ? 'required' : '' }}
-        {{ $attributes }}>
+        value="{{ old($name, $value) }}"
+        {{ $required ? 'required' : '' }}>
     @endif
+    
+    @error($name)
+        <div class="invalid-feedback">{{ $message }}</div>
+    @enderror
 </div>

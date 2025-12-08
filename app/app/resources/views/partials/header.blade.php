@@ -1,6 +1,7 @@
 {{-- 
     HEADER / NAVBAR
     Nawigacja strony z przełącznikiem języka
+    Używa komponentów: x-nav-link, x-language-switcher
 --}}
 
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
@@ -14,16 +15,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}" data-scroll="intro">{{ __('site.nav.home') }}</a>
+                    <x-nav-link scroll="intro">{{ __('site.nav.home') }}</x-nav-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}" data-scroll="about">{{ __('site.nav.about') }}</a>
+                    <x-nav-link scroll="about">{{ __('site.nav.about') }}</x-nav-link>
                 </li>
                 {{-- DROPDOWN USŁUGI --}}
                 <li class="nav-item dropdown">
-                    <a class="nav-link {{ request()->is('uslugi/*') || request()->routeIs('service.show') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
-                        {{ __('site.nav.services') }} <i class="bi bi-chevron-down small"></i>
-                    </a>
+                    <x-nav-link :dropdown="true" :active="request()->is('uslugi/*') || request()->routeIs('service.show')">
+                        {{ __('site.nav.services') }}
+                    </x-nav-link>
                     <ul class="dropdown-menu dropdown-menu-dark">
                         <li>
                             <a class="dropdown-item" href="{{ route('home') }}" data-scroll="services">
@@ -41,31 +42,13 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}" data-scroll="faq">{{ __('site.nav.faq') }}</a>
+                    <x-nav-link scroll="faq">{{ __('site.nav.faq') }}</x-nav-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}" data-scroll="contact">{{ __('site.nav.contact') }}</a>
+                    <x-nav-link scroll="contact">{{ __('site.nav.contact') }}</x-nav-link>
                 </li>
                 {{-- PRZEŁĄCZNIK JĘZYKA --}}
-                <li class="nav-item dropdown ms-lg-3">
-                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
-                        <i class="bi bi-globe me-1"></i>{{ strtoupper(app()->getLocale()) }} <i class="bi bi-chevron-down small"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
-                        <li>
-                            <a class="dropdown-item {{ app()->getLocale() === 'pl' ? 'active' : '' }}" 
-                               href="{{ route('lang.switch', 'pl') }}">
-                                🇵🇱 Polski
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item {{ app()->getLocale() === 'en' ? 'active' : '' }}" 
-                               href="{{ route('lang.switch', 'en') }}">
-                                🇬🇧 English
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                <x-language-switcher />
             </ul>
         </div>
     </div>

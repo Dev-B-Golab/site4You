@@ -2,6 +2,8 @@
 
 @section('title', __('site.contact.success_page.title') . ' - ' . config('site.name'))
 
+@section('robots', 'noindex, nofollow')
+
 @section('content')
 <section class="hero-section d-flex align-items-center justify-content-center" style="min-height: 80vh;">
     <div class="container">
@@ -24,8 +26,18 @@
                     {{ __('site.contact.success_page.message') }}
                 </p>
                 <p class="text-gray mb-4">
-                    {{ __('site.contact.success_page.response_time') }}
+                    <i class="bi bi-clock me-2"></i>{{ __('site.contact.success_page.response_time') }}
                 </p>
+                
+                {{-- PRZYCISKI --}}
+                <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                    <x-button href="{{ route('home') }}" variant="primary">
+                        <i class="bi bi-house me-2"></i>{{ __('site.contact.success_page.back_home') }}
+                    </x-button>
+                    <x-button href="{{ route('home') }}" variant="outline" data-scroll="services">
+                        {{ __('site.contact.success_page.view_services') }}
+                    </x-button>
+                </div>
             </div>
         </div>
     </div>

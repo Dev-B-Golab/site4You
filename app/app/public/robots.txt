@@ -1,11 +1,17 @@
-# Robots.txt for Website4You
+# Robots.txt for Web 4 You
 
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://site4you.local/sitemap.xml
-
-# Disallow admin areas (if any)
+# Disallow admin and system areas
 Disallow: /admin/
 Disallow: /storage/
+Disallow: /vendor/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Allow sitemap
+Allow: /sitemap.xml
+
+# Crawl-delay (optional - be nice to servers)
+Crawl-delay: 1

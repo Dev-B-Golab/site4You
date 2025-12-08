@@ -16,12 +16,11 @@
     'delay' => 0,
 ])
 
-<div {{ $attributes->merge(['class' => 'col-md-6 col-lg-3 mb-4']) }} 
+<div {{ $attributes->merge(['class' => 'process-step']) }} 
      data-aos="fade-up" 
+     data-aos-duration="800"
      data-aos-delay="{{ $delay }}">
-    <div class="process-step text-center h-100 p-4">
-        <div class="process-number mb-3">{{ $number }}</div>
-        <h4>{{ $title }}</h4>
-        <p class="text-white-50 mb-0">{{ $description }}</p>
-    </div>
+    <div class="step-number">{{ $number }}</div>
+    <h5 class="step-title">{{ $title }}</h5>
+    <p class="step-desc">{{ $description }}</p>
 </div>

@@ -1,7 +1,7 @@
 {{-- 
     SEKCJA KONTAKT
     Formularz kontaktowy + dane kontaktowe
-    Używa komponentów: x-section-header, x-icon-text, x-alert, x-button
+    Używa komponentów: x-section-header, x-icon-text, x-alert, x-button, x-form-input
 --}}
 
 <section id="contact">
@@ -43,51 +43,35 @@
                     @csrf
                     <div class="row g-3">
                         <div class="col-md-6">
-                            <label for="name" class="form-label">{{ __('site.contact.form.name') }} *</label>
-                            <input type="text" 
-                                   class="form-control form-control-custom @error('name') is-invalid @enderror" 
-                                   id="name" 
-                                   name="name" 
-                                   value="{{ old('name') }}" 
-                                   placeholder="{{ __('site.contact.form.name_placeholder') }}" 
-                                   required>
-                            @error('name')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
+                            <x-form-input 
+                                name="name" 
+                                :label="__('site.contact.form.name')" 
+                                :placeholder="__('site.contact.form.name_placeholder')" 
+                                :required="true" />
                         </div>
                         <div class="col-md-6">
-                            <label for="email" class="form-label">{{ __('site.contact.form.email') }} *</label>
-                            <input type="email" 
-                                   class="form-control form-control-custom @error('email') is-invalid @enderror" 
-                                   id="email" 
-                                   name="email" 
-                                   value="{{ old('email') }}" 
-                                   placeholder="{{ __('site.contact.form.email_placeholder') }}" 
-                                   required>
-                            @error('email')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
+                            <x-form-input 
+                                name="email" 
+                                type="email"
+                                :label="__('site.contact.form.email')" 
+                                :placeholder="__('site.contact.form.email_placeholder')" 
+                                :required="true" />
                         </div>
                         <div class="col-12">
-                            <label for="phone" class="form-label">{{ __('site.contact.form.phone') }}</label>
-                            <input type="tel" 
-                                   class="form-control form-control-custom" 
-                                   id="phone" 
-                                   name="phone" 
-                                   value="{{ old('phone') }}" 
-                                   placeholder="{{ __('site.contact.form.phone_placeholder') }}">
+                            <x-form-input 
+                                name="phone" 
+                                type="tel"
+                                :label="__('site.contact.form.phone')" 
+                                :placeholder="__('site.contact.form.phone_placeholder')" />
                         </div>
                         <div class="col-12">
-                            <label for="message" class="form-label">{{ __('site.contact.form.message') }} *</label>
-                            <textarea class="form-control form-control-custom @error('message') is-invalid @enderror" 
-                                      id="message" 
-                                      name="message" 
-                                      rows="5" 
-                                      placeholder="{{ __('site.contact.form.message_placeholder') }}" 
-                                      required>{{ old('message') }}</textarea>
-                            @error('message')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
+                            <x-form-input 
+                                name="message" 
+                                type="textarea"
+                                :label="__('site.contact.form.message')" 
+                                :placeholder="__('site.contact.form.message_placeholder')" 
+                                :required="true"
+                                :rows="5" />
                         </div>
                         <div class="col-12">
                             <x-button type="submit" variant="primary" icon="bi-send" class="w-100">

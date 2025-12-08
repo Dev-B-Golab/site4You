@@ -4,15 +4,15 @@
     
     Props:
     - features: tablica cech
-    - icon: ikona dla wszystkich (domyślnie: bi-check-circle-fill)
-    - iconColor: kolor ikony (domyślnie: text-primary)
+    - icon: ikona dla wszystkich (domyślnie: bi-check-circle)
+    - iconColor: kolor ikony (domyślnie: text-white)
     - columns: liczba kolumn (1, 2, 3 - domyślnie: 1)
 --}}
 
 @props([
     'features' => [],
-    'icon' => 'bi-check-circle-fill',
-    'iconColor' => 'text-primary',
+    'icon' => 'bi-check-circle',
+    'iconColor' => 'text-white',
     'columns' => 1,
 ])
 
@@ -24,13 +24,11 @@ $colClass = match($columns) {
 };
 @endphp
 
-<div class="row">
+<ul class="list-unstyled">
     @foreach($features as $feature)
-    <div class="{{ $colClass }} mb-2">
-        <div class="d-flex align-items-start">
-            <i class="bi {{ $icon }} {{ $iconColor }} me-2 mt-1"></i>
-            <span>{{ $feature }}</span>
-        </div>
-    </div>
+    <li class="mb-3">
+        <i class="bi {{ $icon }} {{ $iconColor }} me-2"></i>
+        <span class="text-gray">{{ $feature }}</span>
+    </li>
     @endforeach
-</div>
+</ul>

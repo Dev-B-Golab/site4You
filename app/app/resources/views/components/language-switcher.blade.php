@@ -32,13 +32,18 @@ $names = [
 ];
 @endphp
 
-<div {{ $attributes->merge(['class' => 'language-switcher d-flex gap-2']) }}>
-    @foreach($languages as $lang)
-    <a href="{{ route('locale', $lang) }}" 
-       class="lang-link {{ $currentLang === $lang ? 'active' : '' }}" 
-       title="{{ $names[$lang] ?? strtoupper($lang) }}"
-       aria-label="{{ $names[$lang] ?? strtoupper($lang) }}">
-        <span class="flag">{{ $flags[$lang] ?? strtoupper($lang) }}</span>
+<li class="nav-item dropdown ms-lg-3">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+        <i class="bi bi-globe me-1"></i>{{ strtoupper($currentLang) }}
     </a>
-    @endforeach
-</div>
+    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+        @foreach($languages as $lang)
+        <li>
+            <a class="dropdown-item {{ $currentLang === $lang ? 'active' : '' }}" 
+               href="{{ route('lang.switch', $lang) }}">
+                {{ $flags[$lang] ?? '' }} {{ $names[$lang] ?? strtoupper($lang) }}
+            </a>
+        </li>
+        @endforeach
+    </ul>
+</li>

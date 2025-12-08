@@ -8,6 +8,8 @@
 
 @section('title', __('site.errors.503.title') . ' - ' . config('site.name'))
 
+@section('robots', 'noindex, nofollow')
+
 @section('content')
 <section class="error-section">
     <div class="container">
