@@ -1,53 +1,41 @@
 {{-- 
     SEKCJA KONTAKT
     Formularz kontaktowy + dane kontaktowe
+    Używa komponentów: x-section-header, x-icon-text, x-alert, x-button
 --}}
 
 <section id="contact">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
-                <h2 class="section-title">{{ __('site.contact.title') }}</h2>
-                <p class="section-subtitle">{{ __('site.contact.subtitle') }}</p>
+                <x-section-header 
+                    :title="__('site.contact.title')" 
+                    :subtitle="__('site.contact.subtitle')" 
+                    :centered="false" />
                 <p class="text-gray mb-4">
                     {{ __('site.contact.description') }}
                 </p>
                 
                 {{-- DANE KONTAKTOWE --}}
-                <div class="d-flex align-items-center mb-3">
-                    <div class="card-icon me-3" style="width: 50px; height: 50px;">
-                        <i class="bi bi-envelope" style="font-size: 1.2rem;"></i>
-                    </div>
-                    <div>
-                        <p class="mb-0 text-muted-small">{{ __('site.contact.labels.email') }}</p>
-                        <p class="mb-0">{{ config('site.email') }}</p>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <div class="card-icon me-3" style="width: 50px; height: 50px;">
-                        <i class="bi bi-phone" style="font-size: 1.2rem;"></i>
-                    </div>
-                    <div>
-                        <p class="mb-0 text-muted-small">{{ __('site.contact.labels.phone') }}</p>
-                        <p class="mb-0">{{ config('site.phone') }}</p>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center">
-                    <div class="card-icon me-3" style="width: 50px; height: 50px;">
-                        <i class="bi bi-geo-alt" style="font-size: 1.2rem;"></i>
-                    </div>
-                    <div>
-                        <p class="mb-0 text-muted-small">{{ __('site.contact.labels.location') }}</p>
-                        <p class="mb-0">{{ config('site.address') }}</p>
-                    </div>
-                </div>
+                <x-icon-text 
+                    icon="bi-envelope" 
+                    :label="__('site.contact.labels.email')" 
+                    :value="config('site.email')" 
+                    class="mb-3" />
+                <x-icon-text 
+                    icon="bi-phone" 
+                    :label="__('site.contact.labels.phone')" 
+                    :value="config('site.phone')" 
+                    class="mb-3" />
+                <x-icon-text 
+                    icon="bi-geo-alt" 
+                    :label="__('site.contact.labels.location')" 
+                    :value="config('site.address')" />
             </div>
             <div class="col-lg-6 offset-lg-1" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                 {{-- ALERT SUKCESU --}}
                 @if(session('success'))
-                    <div class="alert alert-success-custom mb-4">
-                        <i class="bi bi-check-circle me-2"></i>{{ __('site.contact.form.success') }}
-                    </div>
+                    <x-alert type="success" :message="__('site.contact.form.success')" class="mb-4" />
                 @endif
 
                 {{-- FORMULARZ KONTAKTOWY --}}
@@ -102,9 +90,9 @@
                             @enderror
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn btn-custom w-100">
-                                <i class="bi bi-send me-2"></i>{{ __('site.contact.form.submit') }}
-                            </button>
+                            <x-button type="submit" variant="primary" icon="bi-send" class="w-100">
+                                {{ __('site.contact.form.submit') }}
+                            </x-button>
                         </div>
                     </div>
                 </form>

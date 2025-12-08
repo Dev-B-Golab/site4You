@@ -1,6 +1,7 @@
 {{-- 
     FOOTER / STOPKA
     Stopka strony z tłumaczeniami
+    Używa komponentów: x-social-links
 --}}
 
 <footer class="footer">
@@ -50,13 +51,7 @@
                     <li><i class="bi bi-geo-alt"></i> {{ config('site.address') }}</li>
                 </ul>
                 {{-- SOCIAL MEDIA --}}
-                <div class="footer-social mt-3">
-                    @foreach(config('site.social') as $platform => $url)
-                    <a href="{{ $url }}" aria-label="{{ ucfirst($platform) }}">
-                        <i class="bi bi-{{ $platform }}"></i>
-                    </a>
-                    @endforeach
-                </div>
+                <x-social-links :links="config('site.social')" class="mt-3" />
             </div>
         </div>
         

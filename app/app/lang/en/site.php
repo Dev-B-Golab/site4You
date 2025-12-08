@@ -18,9 +18,9 @@ return [
     // HERO SECTION
     // ========================================
     'hero' => [
-        'title' => 'I create websites',
-        'subtitle' => 'that sell',
-        'description' => 'Modern, responsive and SEO-optimized websites. I help businesses build a strong online presence and attract new customers.',
+        'title' => 'Websites',
+        'subtitle' => 'tailored to your needs!',
+        'description' => 'Modern, responsive and SEO-optimized. Each project is unique - you\'re just one step away from improving your company\'s online image.',
         'btn_primary' => 'Start a project',
         'btn_secondary' => 'View services',
     ],
@@ -31,10 +31,10 @@ return [
     'about' => [
         'title' => 'About me',
         'subtitle' => 'Meet the person behind the projects',
-        'text1' => 'Hi! I\'m a web developer with a passion for creating beautiful and functional websites. For over X years, I\'ve been helping businesses and entrepreneurs build their online presence.',
+        'text1' => 'Hi! I\'m Bartek, a web developer with a passion for creating beautiful and functional websites. I help businesses and entrepreneurs build their online presence.',
         'text2' => 'I specialize in creating responsive business websites, e-commerce stores, and advanced web applications. I treat each project individually, paying attention to the smallest details.',
         'stats' => [
-            'line_code' => 'Written lines of code',
+            'line_code' => 'Lines of code written',
             'experience' => 'Years of experience',
             'satisfaction' => 'Satisfaction',
         ],
@@ -56,7 +56,7 @@ return [
         'items' => [
             'websites' => [
                 'title' => 'Business websites',
-                'desc' => 'Professional websites presenting your company. Ideal solution for small and medium-sized businesses.',
+                'desc' => 'Professional websites presenting your company. An ideal solution to showcase your business on a wider scale.',
             ],
             'ecommerce' => [
                 'title' => 'E-commerce stores',
@@ -76,7 +76,7 @@ return [
             ],
             'support' => [
                 'title' => 'Technical support',
-                'desc' => 'Ongoing website maintenance, updates, and technical assistance. You can always count on me.',
+                'desc' => 'Ongoing website maintenance, updates, and technical assistance.',
             ],
         ],
         'details' => [
@@ -202,11 +202,11 @@ return [
         'items' => [
             [
                 'question' => 'How much does it cost to create a website?',
-                'answer' => 'The price depends on the project scope. A simple business website starts from X, while a comprehensive e-commerce store starts from Y. I quote each project individually after learning about your needs.',
+                'answer' => 'I quote each project individually after understanding your needs and analyzing the actual implementation time. Don\'t worry, you won\'t go bankrupt with me! 😀',
             ],
             [
                 'question' => 'How long does the project take?',
-                'answer' => 'The timeline depends on the project complexity. A simple business website usually takes 1-2 weeks, while an e-commerce store or web application can take 4 to 8 weeks.',
+                'answer' => 'The timeline depends on the project complexity. A simple business website usually takes 1-2 weeks, while an e-commerce store or web application can take 4 to 8 weeks. Everything is arranged individually during the consultation.',
             ],
             [
                 'question' => 'Will I be able to edit the website myself?',
@@ -214,7 +214,7 @@ return [
             ],
             [
                 'question' => 'Do you also handle hosting and domain?',
-                'answer' => 'Yes, I help with choosing the right hosting and domain registration. I can also take care of all the technical configuration so you don\'t have to worry about the details.',
+                'answer' => 'Yes, I help with choosing the right hosting and domain registration. I can also take care of all the technical configuration so you don\'t have to worry about the details. All you need to do is focus on running your business.',
             ],
             [
                 'question' => 'What if I need changes after launch?',
@@ -229,7 +229,7 @@ return [
     'contact' => [
         'title' => 'Contact',
         'subtitle' => 'Let\'s start working together',
-        'description' => 'Have an idea for a project? I\'d love to discuss your needs and suggest the best solution. Write to me!',
+        'description' => 'Have an idea for a project? I\'d love to discuss your needs and suggest the best solution. Write to me and schedule a free consultation!',
         'labels' => [
             'email' => 'Email',
             'phone' => 'Phone',

@@ -1,17 +1,21 @@
 {{-- 
     SEKCJA PROCES
     Kroki tworzenia strony
+    Używa komponentów: x-section-header, x-image
 --}}
 
 <div class="row mt-5 pt-5">
     <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
-        <h3 class="section-title">{{ __('site.process.title') }}</h3>
-        <p class="section-subtitle">{{ __('site.process.subtitle') }}</p>
+        <x-section-header 
+            :title="__('site.process.title')" 
+            :subtitle="__('site.process.subtitle')" 
+            :centered="false" />
         
         {{-- MIEJSCE NA ILUSTRACJĘ PROCESU --}}
-        <div class="img-placeholder" style="height: 450px;">
-            <img src="{{ asset('img/project-website.png') }}" alt="Code process">
-        </div>
+        <x-image 
+            src="img/project-website.png" 
+            alt="Code process" 
+            height="450px" />
     </div>
     <div class="col-lg-6 offset-lg-1">
         {{-- KROKI PROCESU --}}
