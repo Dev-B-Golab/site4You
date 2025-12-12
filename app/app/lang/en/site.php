@@ -330,4 +330,307 @@ return [
         ],
     ],
 
+    // ========================================
+    // TEMPLATE PREVIEW
+    // ========================================
+    'templates' => [
+        'title' => 'Browse Sample Templates',
+        'subtitle' => 'See how your website could look on different devices',
+        'business' => 'Business',
+        'portfolio' => 'Portfolio',
+        'restaurant' => 'Restaurant',
+        'ecommerce' => 'E-commerce',
+        'open_new' => 'Open in new tab',
+        'info' => 'These are examples only - every project is tailored to the client\'s needs',
+        'cta' => 'Let\'s talk about your project',
+        'mobile_only' => 'Mobile view preview',
+    ],
+
+    // ========================================
+    // DEMO TEMPLATES - BUSINESS
+    // ========================================
+    'tpl_business' => [
+        'title' => 'Business Template - Consulting Firm',
+        'brand' => 'Online Consulting',
+        'nav' => [
+            'home' => 'Home',
+            'about' => 'About us',
+            'services' => 'Services',
+            'contact' => 'Contact',
+        ],
+        'cta_btn' => 'Free Consultation',
+        'hero' => [
+            'title' => 'We grow your business to new heights',
+            'desc' => 'Professional business consulting and growth strategies for companies of all sizes. We transform challenges into opportunities.',
+            'btn_primary' => 'Get started',
+            'btn_secondary' => 'Learn more',
+        ],
+        'features' => [
+            'growth' => [
+                'title' => 'Growth Strategy',
+                'desc' => 'We create personalized strategies that drive sustainable business growth.',
+            ],
+            'team' => [
+                'title' => 'Team Management',
+                'desc' => 'We optimize organizational structures and human resource management processes.',
+            ],
+            'audit' => [
+                'title' => 'Audit & Compliance',
+                'desc' => 'We ensure regulatory compliance and optimize business processes.',
+            ],
+        ],
+        'stats' => [
+            'clients' => 'Clients',
+            'years' => 'Years of experience',
+            'satisfaction' => 'Satisfied clients',
+            'projects' => 'Projects',
+        ],
+        'services' => [
+            'title' => 'Our Services',
+            'subtitle' => 'Comprehensive solutions for your business',
+            'strategic' => [
+                'title' => 'Strategic Consulting',
+                'desc' => 'Market analysis, strategic planning and implementation of business solutions.',
+            ],
+            'financial' => [
+                'title' => 'Financial Optimization',
+                'desc' => 'Cost management, budgeting and financial planning.',
+            ],
+            'digital' => [
+                'title' => 'Digital Transformation',
+                'desc' => 'Implementation of modern technologies and process automation.',
+            ],
+        ],
+        'cta' => [
+            'title' => 'Ready for business growth?',
+            'desc' => 'Contact us and receive a free strategic consultation',
+            'btn' => 'Schedule a meeting',
+        ],
+        'footer' => [
+            'desc' => 'Professional business consulting for companies that want to grow.',
+            'company' => 'Company',
+            'about' => 'About us',
+            'team' => 'Team',
+            'career' => 'Careers',
+            'services' => 'Services',
+            'consulting' => 'Consulting',
+            'training' => 'Training',
+            'audit' => 'Audit',
+            'contact' => 'Contact',
+            'copyright' => '© 2026 Online Consulting. All rights reserved.',
+        ],
+    ],
+
+    // ========================================
+    // DEMO TEMPLATES - PORTFOLIO
+    // ========================================
+    'tpl_portfolio' => [
+        'title' => 'Portfolio Template - Creative Freelancer',
+        'nav' => [
+            'home' => 'Home',
+            'about' => 'About',
+            'portfolio' => 'Portfolio',
+            'services' => 'Services',
+            'contact' => 'Contact',
+        ],
+        'hero' => [
+            'title_1' => 'I create',
+            'title_2' => 'digital',
+            'title_3' => 'experiences',
+            'desc' => 'I\'m a freelance web developer and UI/UX designer. I help businesses build their online presence through beautiful and functional websites.',
+            'btn' => 'View portfolio',
+        ],
+        'about' => [
+            'label' => 'About me',
+            'title' => 'Passion for creating exceptional websites',
+            'text_1' => 'For over 8 years I\'ve been creating websites and web applications. I specialize in modern front-end technologies and pay attention to every detail of the project.',
+            'text_2' => 'My goal is to deliver solutions that not only look great, but above all achieve business objectives.',
+        ],
+        'portfolio' => [
+            'title' => 'My Projects',
+            'subtitle' => 'Selected works from recent years',
+            'project_1' => ['title' => 'E-commerce Fashion', 'category' => 'Online Store'],
+            'project_2' => ['title' => 'Dashboard Analytics', 'category' => 'SaaS Application'],
+            'project_3' => ['title' => 'TechStartup Landing', 'category' => 'Corporate Website'],
+        ],
+        'services' => [
+            'title' => 'Services',
+            'subtitle' => 'What I can do for you',
+            'design' => [
+                'title' => 'UI/UX Design',
+                'desc' => 'I design intuitive and aesthetic user interfaces following the latest trends.',
+                'price' => 'from $500',
+            ],
+            'development' => [
+                'title' => 'Web Development',
+                'desc' => 'I create fast, responsive websites and applications using modern technologies.',
+                'price' => 'from $900',
+            ],
+            'ecommerce' => [
+                'title' => 'E-commerce',
+                'desc' => 'I build online stores that sell and provide excellent UX.',
+                'price' => 'from $1200',
+            ],
+        ],
+        'contact' => [
+            'title' => 'Have a project in mind?',
+            'desc' => 'Write to me and let\'s discuss your needs',
+            'btn' => 'Send message',
+        ],
+        'footer' => [
+            'copyright' => '© 2026 Jan.Dev - Built with',
+            'love' => '❤️',
+            'country' => 'in Poland',
+        ],
+    ],
+
+    // ========================================
+    // DEMO TEMPLATES - RESTAURANT
+    // ========================================
+    'tpl_restaurant' => [
+        'title' => 'Restaurant Template - Restaurant & Cafe',
+        'brand' => 'Restaurant',
+        'nav' => [
+            'home' => 'Home',
+            'about' => 'About',
+            'menu' => 'Menu',
+            'gallery' => 'Gallery',
+            'contact' => 'Contact',
+        ],
+        'reservation_btn' => 'Reservation',
+        'hero' => [
+            'welcome' => 'Welcome to',
+            'desc' => 'Exceptional fusion cuisine combining traditional Polish flavors with modern culinary techniques',
+            'btn_menu' => 'Our menu',
+            'btn_reserve' => 'Book a table',
+        ],
+        'about' => [
+            'label' => 'Our story',
+            'title' => 'Passion for cooking since 2010',
+            'text_1' => 'This is a place where traditional Polish cuisine meets modern culinary techniques. Our head chef, Michał Kowalski, has honed his skills in the best restaurants across Europe.',
+            'text_2' => 'Every dish is prepared from the freshest, local ingredients, with attention to every detail. We believe that food is not just a meal - it\'s an experience that engages all senses.',
+            'signature' => '~ Chef Michał Kowalski',
+        ],
+        'menu' => [
+            'label' => 'Discover',
+            'title' => 'Our menu',
+            'tabs' => [
+                'starters' => 'Starters',
+                'mains' => 'Main courses',
+                'desserts' => 'Desserts',
+                'drinks' => 'Drinks',
+            ],
+            'items' => [
+                'tartare' => ['name' => 'Beef tenderloin tartare', 'desc' => 'with egg yolk, capers and toast'],
+                'carpaccio' => ['name' => 'Beetroot carpaccio', 'desc' => 'with goat cheese and walnuts'],
+                'shrimp' => ['name' => 'Tiger prawns', 'desc' => 'in garlic butter with chili'],
+                'soup' => ['name' => 'Pumpkin cream soup', 'desc' => 'with roasted seeds and truffle oil'],
+                'bruschetta' => ['name' => 'Bruschetta trio', 'desc' => 'tomatoes, olives, gorgonzola cheese'],
+                'salad' => ['name' => 'Grilled halloumi salad', 'desc' => 'with arugula, tomatoes and honey dressing'],
+            ],
+        ],
+        'reservation' => [
+            'label' => 'Book a table',
+            'title' => 'Online reservation',
+            'form' => [
+                'name' => 'Full name',
+                'phone' => 'Phone',
+                'guests' => 'Number of guests',
+                'guests_options' => ['2 people', '3-4 people', '5-6 people', '7+ people'],
+                'submit' => 'Book a table',
+            ],
+        ],
+        'info' => [
+            'address' => ['title' => 'Address', 'line_1' => '15 Tasty Street', 'line_2' => 'New York, NY 10001'],
+            'hours' => ['title' => 'Opening hours', 'line_1' => 'Mon-Fri: 12:00 - 23:00', 'line_2' => 'Sat-Sun: 13:00 - 24:00'],
+            'contact' => ['title' => 'Contact', 'line_1' => '+1 212 123 4567', 'line_2' => 'reservations@restaurant.com'],
+        ],
+        'footer' => [
+            'copyright' => '© 2026 Restaurant. All rights reserved.',
+        ],
+    ],
+
+    // ========================================
+    // DEMO TEMPLATES - ECOMMERCE
+    // ========================================
+    'tpl_ecommerce' => [
+        'title' => 'TechStore - Electronics Store',
+        'brand' => 'TechStore',
+        'top_bar' => [
+            'free_shipping' => 'Free shipping from $50',
+            'returns' => '30 day returns',
+            'help' => 'Help',
+            'tracking' => 'Track order',
+            'lang' => 'EN | USD',
+        ],
+        'search' => 'Search products, brands and categories...',
+        'nav' => [
+            'home' => 'Home',
+            'smartphones' => 'Smartphones',
+            'laptops' => 'Laptops',
+            'tablets' => 'Tablets',
+            'audio' => 'Audio',
+            'gaming' => 'Gaming',
+            'accessories' => 'Accessories',
+            'promotions' => 'Promotions',
+        ],
+        'hero' => [
+            'badge' => 'New 2024',
+            'title_1' => 'New',
+            'title_2' => 'iPhone 15 Pro',
+            'title_3' => 'now available',
+            'desc' => 'Discover the revolutionary A17 Pro chip, titanium housing and the most advanced camera system in iPhone history.',
+            'btn' => 'Buy now',
+        ],
+        'features' => [
+            'shipping' => ['title' => 'Free shipping', 'desc' => 'From $50'],
+            'warranty' => ['title' => '24 month warranty', 'desc' => 'Official warranty'],
+            'returns' => ['title' => '30 day returns', 'desc' => 'No questions asked'],
+            'support' => ['title' => '24/7 Support', 'desc' => 'Always at your service'],
+        ],
+        'categories' => [
+            'title' => 'Popular categories',
+            'view_all' => 'View all',
+            'items' => [
+                'phones' => ['name' => 'Smartphones', 'count' => '256 products'],
+                'laptops' => ['name' => 'Laptops', 'count' => '184 products'],
+                'tablets' => ['name' => 'Tablets', 'count' => '92 products'],
+                'audio' => ['name' => 'Audio', 'count' => '315 products'],
+                'gaming' => ['name' => 'Gaming', 'count' => '178 products'],
+                'smartwatch' => ['name' => 'Smartwatch', 'count' => '64 products'],
+            ],
+        ],
+        'products' => [
+            'title' => 'Featured products',
+            'view_all' => 'View all',
+            'add_to_cart' => 'Add to cart',
+            'badge_new' => 'New',
+            'badge_sale' => '-15%',
+            'badge_hot' => 'Hot',
+        ],
+        'promo' => [
+            'title' => 'Sign up for newsletter and get 10% off!',
+            'desc' => 'Stay up to date with news and promotions. Use the code on your first purchase:',
+        ],
+        'newsletter' => [
+            'title' => 'Subscribe to newsletter',
+            'desc' => 'Get updates on new products, promotions and exclusive offers.',
+            'placeholder' => 'Your email address',
+            'btn' => 'Subscribe',
+        ],
+        'footer' => [
+            'desc' => 'Your trusted electronics store. We offer the latest smartphones, laptops, tablets and accessories from top brands.',
+            'shop' => 'Shop',
+            'info' => 'Information',
+            'about' => 'About us',
+            'terms' => 'Terms of service',
+            'privacy' => 'Privacy policy',
+            'shipping' => 'Shipping & payments',
+            'returns' => 'Returns',
+            'contact' => 'Contact',
+            'accept' => 'We accept:',
+            'copyright' => '© 2024 TechStore. All rights reserved.',
+        ],
+    ],
+
 ];

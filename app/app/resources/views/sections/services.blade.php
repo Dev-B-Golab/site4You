@@ -33,8 +33,15 @@
             </article>
             @endforeach
         </div>
+    </div>
+</section>
 
-        {{-- PROCES TWORZENIA STRONY --}}
+{{-- PODGLĄD SZABLONÓW --}}
+@include('sections.templates-preview')
+
+{{-- PROCES TWORZENIA STRONY --}}
+<section id="process" aria-labelledby="process-title">
+    <div class="container">
         @include('sections.process')
     </div>
 </section>

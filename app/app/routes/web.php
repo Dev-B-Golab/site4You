@@ -14,6 +14,17 @@ Route::prefix('{locale}')->where(['locale' => 'pl|en'])->group(function () {
 // Podstrony usług
 Route::get('/uslugi/{slug}', [HomeController::class, 'service'])->name('service.show');
 
+// Demo szablony - renderowane z Blade (z tłumaczeniami)
+Route::get('/demo/templates/{template}', function ($template) {
+    $validTemplates = ['business', 'portfolio', 'restaurant', 'ecommerce'];
+    
+    if (!in_array($template, $validTemplates)) {
+        abort(404);
+    }
+    
+    return view('templates.' . $template);
+})->name('templates.demo');
+
 // Formularz kontaktowy
 Route::post('/contact', [HomeController::class, 'contact'])->name('contact.submit');
 Route::get('/contact/success', function () {
