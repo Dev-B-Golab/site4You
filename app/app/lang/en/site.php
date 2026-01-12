@@ -10,6 +10,7 @@ return [
         'about' => 'About',
         'services' => 'Services',
         'all_services' => 'All services',
+        'templates' => 'Templates',
         'faq' => 'FAQ',
         'contact' => 'Contact',
     ],

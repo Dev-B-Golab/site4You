@@ -37,11 +37,11 @@
         'btnSecondary' => config('site.hero.btn_secondary'),
     ])
 
-    {{-- SEKCJA 2: O MNIE --}}
+    <!-- {{-- SEKCJA 2: O MNIE --}}
     @include('sections.about', [
         'about' => config('site.about'),
         'stats' => config('site.about.stats'),
-    ])
+    ]) -->
 
     {{-- SEKCJA 3: USŁUGI + PROCES --}}
     @include('sections.services', [

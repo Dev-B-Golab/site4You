@@ -10,6 +10,7 @@ return [
         'about' => 'O mnie',
         'services' => 'Usługi',
         'all_services' => 'Wszystkie usługi',
+        'templates' => 'Szablony',
         'faq' => 'FAQ',
         'contact' => 'Kontakt',
     ],

@@ -22,8 +22,9 @@
                 <h5 class="footer-title">{{ __('site.footer.navigation') }}</h5>
                 <ul class="footer-links">
                     <li><a href="{{ route('home') }}" data-scroll="intro">{{ __('site.nav.home') }}</a></li>
-                    <li><a href="{{ route('home') }}" data-scroll="about">{{ __('site.nav.about') }}</a></li>
+                    <!-- <li><a href="{{ route('home') }}" data-scroll="about">{{ __('site.nav.about') }}</a></li> -->
                     <li><a href="{{ route('home') }}" data-scroll="services">{{ __('site.nav.services') }}</a></li>
+                    <li><a href="{{ route('home') }}" data-scroll="templates">{{ __('site.nav.templates') }}</a></li>
                     <li><a href="{{ route('home') }}" data-scroll="faq">{{ __('site.nav.faq') }}</a></li>
                     <li><a href="{{ route('home') }}" data-scroll="contact">{{ __('site.nav.contact') }}</a></li>
                 </ul>

@@ -17,9 +17,9 @@
                 <li class="nav-item">
                     <x-nav-link scroll="intro">{{ __('site.nav.home') }}</x-nav-link>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <x-nav-link scroll="about">{{ __('site.nav.about') }}</x-nav-link>
-                </li>
+                </li> -->
                 {{-- DROPDOWN USŁUGI --}}
                 <li class="nav-item dropdown">
                     <x-nav-link :dropdown="true" :active="request()->is('uslugi/*') || request()->routeIs('service.show')">
@@ -40,6 +40,9 @@
                         </li>
                         @endforeach
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <x-nav-link scroll="templates">{{ __('site.nav.templates') }}</x-nav-link>
                 </li>
                 <li class="nav-item">
                     <x-nav-link scroll="faq">{{ __('site.nav.faq') }}</x-nav-link>

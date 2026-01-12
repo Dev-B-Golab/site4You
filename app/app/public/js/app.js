@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (dataScroll === currentSection) {
                         link.classList.add('active');
                     }
-                    // Dla sekcji services - podświetl dropdown Usługi
-                    else if (currentSection === 'services' && (linkText.indexOf('Usługi') !== -1 || linkText.indexOf('Services') !== -1)) {
+                    // Dla sekcji services i process - podświetl dropdown Usługi
+                    else if ((currentSection === 'services' || currentSection === 'process') && (linkText.indexOf('Usługi') !== -1 || linkText.indexOf('Services') !== -1)) {
                         link.classList.add('active');
                     }
                     // Dla sekcji intro - podświetl Home/Start
