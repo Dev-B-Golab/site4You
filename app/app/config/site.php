@@ -14,7 +14,7 @@ return [
     // ========================================
     // DANE FIRMY / KONTAKT
     // ========================================
-    'name' => 'WEBSITE4YOU',
+    'name' => 'WebsiteForYou',
     'email' => 'golabwebdev@gmail.com',
     'phone' => '+48 451 079 977',
     'address' => 'Krosno, Polska',
@@ -24,8 +24,7 @@ return [
     // SOCIAL MEDIA
     // ========================================
     'social' => [
-        'facebook' => '#',
-        'instagram' => '#',
+        'instagram' => 'https://www.instagram.com/websiteforyou.pl',
         'linkedin' => 'https://www.linkedin.com/in/bartek-gołąb-391b22255',
         'github' => 'https://github.com/Dev-B-Golab',
     ],

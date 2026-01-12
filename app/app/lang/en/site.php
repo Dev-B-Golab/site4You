@@ -344,6 +344,9 @@ return [
         'info' => 'These are examples only - every project is tailored to the client\'s needs',
         'cta' => 'Let\'s talk about your project',
         'mobile_only' => 'Mobile view preview',
+        'tablet_max' => 'Preview up to tablet size',
+        'laptop_max' => 'Preview up to laptop size',
+        'screen_limit_info' => 'Available views are limited to your screen size',
     ],
 
     // ========================================

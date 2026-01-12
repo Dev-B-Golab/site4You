@@ -29,25 +29,25 @@
         </div>
         
         {{-- Przełącznik urządzeń --}}
-        <div class="device-switcher mb-4 d-none d-md-block" data-aos="fade-up" data-aos-delay="100">
-            <div class="d-flex justify-content-center gap-2">
-                <button class="device-btn active" data-device="desktop" title="Desktop (1920px)">
+        <div class="device-switcher mb-4" data-aos="fade-up" data-aos-delay="100" id="deviceSwitcher">
+            <div class="d-flex justify-content-center gap-2" id="deviceButtons">
+                <button class="device-btn" data-device="desktop" data-min-width="1200" title="Desktop (1200px+)">
                     <i class="bi bi-display"></i>
                 </button>
-                <button class="device-btn" data-device="laptop" title="Laptop (1366px)">
+                <button class="device-btn" data-device="laptop" data-min-width="992" title="Laptop (992px+)">
                     <i class="bi bi-laptop"></i>
                 </button>
-                <button class="device-btn" data-device="tablet" title="Tablet (768px)">
+                <button class="device-btn" data-device="tablet" data-min-width="768" title="Tablet (768px+)">
                     <i class="bi bi-tablet"></i>
                 </button>
-                <button class="device-btn" data-device="mobile" title="Mobile (375px)">
+                <button class="device-btn" data-device="mobile" data-min-width="0" title="Mobile (375px)">
                     <i class="bi bi-phone"></i>
                 </button>
             </div>
         </div>
-        {{-- Info dla mobile - tylko widok mobilny --}}
-        <div class="d-md-none text-center mb-3">
-            <span class="badge bg-secondary"><i class="bi bi-phone me-1"></i>{{ __('site.templates.mobile_only') }}</span>
+        {{-- Info o ograniczeniu rozmiaru --}}
+        <div class="text-center mb-3" id="screenLimitInfo" style="display: none;">
+            <span class="badge bg-secondary"><i class="bi bi-info-circle me-1"></i><span id="screenLimitText"></span></span>
         </div>
         
         @php
@@ -128,7 +128,7 @@
     transition: all 0.3s ease;
     cursor: pointer;
 }
-.device-btn:hover {
+.device-btn:hover:not(:disabled) {
     border-color: var(--text-white);
     color: var(--text-white);
 }
@@ -136,6 +136,11 @@
     background: var(--text-white);
     border-color: var(--text-white);
     color: var(--bg-dark);
+}
+.device-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
 /* Preview Container */
@@ -215,12 +220,14 @@
     border: none;
 }
 
-/* Responsive */
+/* Responsive - dostosowanie do rozmiaru ekranu */
 @media (max-width: 1200px) {
-    .preview-frame.laptop { width: 100%; }
+    .preview-frame.desktop { width: 100%; max-width: 100%; }
+    .preview-frame.laptop { width: 100%; max-width: 100%; }
 }
 @media (max-width: 992px) {
-    .preview-frame.tablet { width: 100%; }
+    .preview-frame.laptop { width: 100%; max-width: 100%; }
+    .preview-frame.tablet { width: 100%; max-width: 100%; }
     .preview-body { height: 500px; }
 }
 @media (max-width: 768px) {
@@ -238,6 +245,7 @@
     }
     .preview-body { height: 500px; }
     .template-btn { padding: 0.6rem 1rem; font-size: 0.9rem; }
+    .device-switcher { display: none !important; }
     .preview-header { padding: 8px 12px; gap: 8px; }
     .browser-dots .dot { width: 8px; height: 8px; }
     .browser-url { padding: 6px 10px; font-size: 0.75rem; }
@@ -252,14 +260,101 @@ document.addEventListener('DOMContentLoaded', function() {
     const previewIframe = document.getElementById('templatePreview');
     const externalLink = document.querySelector('.preview-external');
     const urlText = document.querySelector('.url-text');
+    const screenLimitInfo = document.getElementById('screenLimitInfo');
+    const screenLimitText = document.getElementById('screenLimitText');
+    const deviceSwitcher = document.getElementById('deviceSwitcher');
     
     // Cache buster - wymusza odświeżenie iframe
     const cacheBuster = '?v=' + Date.now();
     
-    // Na mobile automatycznie ustaw widok mobilny
-    if (window.innerWidth < 768) {
-        previewFrame.className = 'preview-frame mobile';
+    // Rozmiary urządzeń (minimalna szerokość ekranu do pokazania przycisku)
+    const deviceWidths = {
+        desktop: 1200,
+        laptop: 992,
+        tablet: 768,
+        mobile: 0
+    };
+    
+    // Tłumaczenia
+    const translations = {
+        mobile_only: '{{ __('site.templates.mobile_only') }}',
+        tablet_max: '{{ __('site.templates.tablet_max') }}',
+        laptop_max: '{{ __('site.templates.laptop_max') }}',
+        screen_limit_info: '{{ __('site.templates.screen_limit_info') }}'
+    };
+    
+    // Funkcja do określenia dostępnych urządzeń na podstawie szerokości ekranu
+    function updateAvailableDevices() {
+        const screenWidth = window.innerWidth;
+        let availableDevices = [];
+        let highestAvailable = 'mobile';
+        
+        deviceBtns.forEach(btn => {
+            const device = btn.dataset.device;
+            const minWidth = parseInt(btn.dataset.minWidth);
+            
+            if (screenWidth >= minWidth) {
+                btn.disabled = false;
+                btn.style.display = '';
+                availableDevices.push(device);
+                
+                // Znajdź największe dostępne urządzenie
+                if (deviceWidths[device] > deviceWidths[highestAvailable]) {
+                    highestAvailable = device;
+                }
+            } else {
+                btn.disabled = true;
+                btn.style.display = 'none';
+                btn.classList.remove('active');
+            }
+        });
+        
+        // Pokaż/ukryj device switcher
+        if (availableDevices.length <= 1) {
+            deviceSwitcher.style.display = 'none';
+        } else {
+            deviceSwitcher.style.display = '';
+        }
+        
+        // Pokaż odpowiedni komunikat o ograniczeniu
+        if (screenWidth < 768) {
+            screenLimitInfo.style.display = '';
+            screenLimitText.textContent = translations.mobile_only;
+        } else if (screenWidth < 992) {
+            screenLimitInfo.style.display = '';
+            screenLimitText.textContent = translations.tablet_max;
+        } else if (screenWidth < 1200) {
+            screenLimitInfo.style.display = '';
+            screenLimitText.textContent = translations.laptop_max;
+        } else {
+            screenLimitInfo.style.display = 'none';
+        }
+        
+        // Jeśli żaden przycisk nie jest aktywny, aktywuj największy dostępny
+        const hasActive = Array.from(deviceBtns).some(btn => btn.classList.contains('active') && !btn.disabled);
+        if (!hasActive) {
+            const highestBtn = document.querySelector(`.device-btn[data-device="${highestAvailable}"]`);
+            if (highestBtn) {
+                highestBtn.classList.add('active');
+                previewFrame.className = 'preview-frame ' + highestAvailable;
+            }
+        }
+        
+        return highestAvailable;
     }
+    
+    // Inicjalizacja - ustaw dostępne urządzenia
+    const initialDevice = updateAvailableDevices();
+    previewFrame.className = 'preview-frame ' + initialDevice;
+    
+    // Nasłuchuj zmian rozmiaru okna
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+            updateAvailableDevices();
+        }, 150);
+    });
     
     const templates = {
         business: '{{ route("templates.demo", "business") }}' + cacheBuster,
@@ -271,7 +366,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const templateUrls = {
         business: 'www.firma-konsultingowa.pl',
         portfolio: 'www.jan-developer.pl',
-        restaurant: 'www.restauracja-savoria.pl',
+        restaurant: 'www.restauracja.pl',
         ecommerce: 'www.techstore-sklep.pl'
     };
     
@@ -291,6 +386,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Device switching
     deviceBtns.forEach(btn => {
         btn.addEventListener('click', function() {
+            if (this.disabled) return;
+            
             deviceBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             

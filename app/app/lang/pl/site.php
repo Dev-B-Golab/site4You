@@ -344,6 +344,9 @@ return [
         'info' => 'To tylko przykłady - każdy projekt dostosowuję indywidualnie do potrzeb klienta',
         'cta' => 'Porozmawiajmy o Twoim projekcie',
         'mobile_only' => 'Podgląd widoku mobilnego',
+        'tablet_max' => 'Podgląd do rozmiaru tabletu',
+        'laptop_max' => 'Podgląd do rozmiaru laptopa',
+        'screen_limit_info' => 'Dostępne widoki są ograniczone do rozmiaru Twojego ekranu',
     ],
 
     // ========================================
