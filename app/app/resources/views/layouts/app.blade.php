@@ -15,13 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     {{-- SEO META TAGS --}}
-    <title>@yield('title', 'Strony internetowe Krosno | Tanie strony www - ' . config('site.name'))</title>
-    <meta name="description" content="@yield('meta_description', 'Tanie strony internetowe Krosno, Podkarpacie. Tworzenie profesjonalnych stron www, sklepów internetowych i aplikacji webowych dla firm.')">
-    <meta name="keywords" content="@yield('meta_keywords', 'strony internetowe, tanie strony internetowe, strony internetowe krosno, strony www, sklep internetowy, tworzenie stron, webdeveloper')">
+    <title>@yield('title', config('site.name') . ' - Profesjonalne strony internetowe')</title>
+    <meta name="description" content="@yield('meta_description', 'Strona wizytówka, sklep internetowy czy dedykowana aplikacja webowa? Zaufaj specjalistom i zacznij budować swoją obecność w sieci już dziś.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'strony internetowe, profesjonalne strony www, sklep internetowy, aplikacje webowe, tworzenie stron, webdeveloper, strony dla firm, strony internnetowe krosno, strony internetowe podkarpacie, tanie strony internetowe, sklepy e-commerce')">
     <meta name="author" content="{{ config('site.name') }}">
     <meta name="robots" content="@yield('robots', 'index, follow')">
-    <meta name="geo.region" content="PL-18">
-    <meta name="geo.placename" content="Krosno">
     <link rel="canonical" href="{{ url()->current() }}">
     
     {{-- OPEN GRAPH / FACEBOOK --}}

@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Strony internetowe Krosno, Podkarpacie | Tanie strony www - ' . config('site.name'))
+@section('title', config('site.name') . ' - Profesjonalne strony internetowe')
 
-@section('meta_description', 'Tanie strony internetowe Krosno, Podkarpacie. Tworzenie stron www, sklepów internetowych i aplikacji webowych. Profesjonalne, responsywne strony dla firm.')
+@section('meta_description', 'Strona wizytówka, sklep internetowy czy dedykowana aplikacja webowa? Zaufaj specjalistom i zacznij budować swoją obecność w sieci już dziś.')
 
-@section('meta_keywords', 'strony internetowe, tanie strony internetowe, strony internetowe krosno, strony internetowe podkarpacie, strony www, sklep internetowy, tworzenie stron, webdeveloper krosno')
+@section('meta_keywords', 'strony internetowe, profesjonalne strony www, sklep internetowy, aplikacje webowe, tworzenie stron, webdeveloper, strony dla firm, strony internnetowe krosno, strony internetowe podkarpacie, tanie strony internetowe, sklepy e-commerce')
 
 @section('schema')
 <script type="application/ld+json">
@@ -12,7 +12,7 @@
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
     "name": "{{ config('site.name') }}",
-    "description": "Tanie strony internetowe Krosno, Podkarpacie. Tworzenie profesjonalnych stron www, sklepów internetowych i aplikacji webowych.",
+    "description": "Strona wizytówka, sklep internetowy czy dedykowana aplikacja webowa? Zaufaj specjalistom i zacznij budować swoją obecność w sieci.",
     "url": "{{ route('home') }}",
     "telephone": "{{ config('site.phone') }}",
     "email": "{{ config('site.email') }}",
