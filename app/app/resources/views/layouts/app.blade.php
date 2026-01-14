@@ -68,21 +68,20 @@
     <script type="application/ld+json">
     {
         "@@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@@type": "LocalBusiness",
         "name": "{{ config('site.name') }}",
         "description": "{{ config('site.description') }}",
         "url": "{{ url('/') }}",
         "telephone": "{{ config('site.phone') }}",
         "email": "{{ config('site.email') }}",
         "address": {
-            "@type": "PostalAddress",
+            "@@type": "PostalAddress",
             "addressLocality": "Krosno",
             "addressCountry": "PL"
         },
         "priceRange": "$$",
         "openingHours": "Mo-Fr 09:00-17:00",
         "sameAs": [
-            "{{ config('site.social.facebook') }}",
             "{{ config('site.social.instagram') }}",
             "{{ config('site.social.linkedin') }}",
             "{{ config('site.social.github') }}"
