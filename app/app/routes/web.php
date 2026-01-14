@@ -31,8 +31,8 @@ Route::get('/contact/success', function () {
     return view('contact-success');
 })->name('contact.success');
 
-// Zmiana języka
-Route::get('/lang/{locale}', function ($locale) {
+// Zmiana języka (używamy /switch-lang/ zamiast /lang/ bo folder lang istnieje na serwerze)
+Route::get('/switch-lang/{locale}', function ($locale) {
     if (in_array($locale, ['pl', 'en'])) {
         session(['locale' => $locale]);
         app()->setLocale($locale);
