@@ -80,11 +80,17 @@
                     :subtitle="__('site.services.contact_subtitle')"
                     :centered="true" />
                 <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-                    <x-button href="{{ route('home') }}" variant="primary" icon="bi-envelope" data-scroll="contact">
+                    <x-button 
+                        href="{{ route('home', ['service' => __('site.services.items.' . $service . '.title')]) }}#contact" 
+                        variant="primary" 
+                        icon="bi-envelope">
                         {{ __('site.services.contact_btn') }}
                     </x-button>
-                    <x-button href="tel:{{ config('site.phone') }}" variant="outline" icon="bi-telephone">
+                    <x-button href="tel:{{ str_replace(' ', '', config('site.phone')) }}" variant="outline" icon="bi-telephone">
                         {{ config('site.phone') }}
+                    </x-button>
+                    <x-button href="tel:{{ str_replace(' ', '', config('site.phone2')) }}" variant="outline" icon="bi-telephone">
+                        {{ config('site.phone2') }}
                     </x-button>
                 </div>
             </div>

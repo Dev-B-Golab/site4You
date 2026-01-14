@@ -15,7 +15,7 @@ class HomeController extends Controller
 
     public function service($slug)
     {
-        $services = ['websites', 'ecommerce', 'webapps', 'seo', 'responsive', 'support'];
+        $services = ['websites', 'ecommerce', 'webapps'];
         
         if (!in_array($slug, $services)) {
             abort(404);

@@ -4,7 +4,7 @@
     Używa komponentów: x-section-header, x-accordion-item, x-button
 --}}
 
-<section id="faq" class="bg-darker">
+<section id="faq">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">

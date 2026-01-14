@@ -57,34 +57,22 @@ return [
         'items' => [
             'websites' => [
                 'title' => 'Business websites',
-                'desc' => 'Professional websites presenting your company. An ideal solution to showcase your business on a wider scale.',
+                'desc' => 'Professional websites for companies.  An ideal solution to showcase your business on a wider scale.',
             ],
             'ecommerce' => [
                 'title' => 'E-commerce stores',
-                'desc' => 'Functional e-commerce stores with payment systems and product management. Ready to sell from day one.',
+                'desc' => 'Functional online stores with payment systems and product management. Ready to sell from day one.',
             ],
             'webapps' => [
                 'title' => 'Web applications',
-                'desc' => 'Dedicated solutions tailored to your business needs. From simple tools to complex systems.',
-            ],
-            'seo' => [
-                'title' => 'SEO optimization',
-                'desc' => 'Website optimization for search engines so your site is visible to potential customers.',
-            ],
-            'responsive' => [
-                'title' => 'Responsiveness',
-                'desc' => 'Every website looks perfect on all devices - computers, tablets, and smartphones.',
-            ],
-            'support' => [
-                'title' => 'Technical support',
-                'desc' => 'Ongoing website maintenance, updates, and technical assistance.',
+                'desc' => 'Dedicated web applications tailored to your business needs. From simple tools to complex systems.',
             ],
         ],
         'details' => [
             'websites' => [
                 'heading' => 'Professional business websites',
-                'subheading' => 'Your company online',
-                'content' => '<p class="mb-4">A business website is the foundation of your company\'s online presence. I create modern, responsive websites that effectively showcase your business and attract new customers.</p><p class="mb-4">Every website is SEO optimized, so your potential customers can easily find you on Google.</p>',
+                'subheading' => 'Affordable websites for companies',
+                'content' => '<p class="mb-4">A business website is the foundation of your company\'s online presence. I create modern, responsive websites that effectively showcase your business and attract new customers.</p><p class="mb-4">Every website is SEO optimized, so your potential customers can easily find you on Google.</p><p class="mb-4"><strong>I offer ongoing technical support for your website.</strong> I take care of updates, security and proper functioning. I respond quickly to reports and help solve problems.</p>',
                 'features' => [
                     'Responsive design (mobile-first)',
                     'SEO optimization',
@@ -92,12 +80,14 @@ return [
                     'Social media integration',
                     'SSL certificate',
                     'Training included',
+                    'Technical support included',
+                    '...and everything you need',
                 ],
             ],
             'ecommerce' => [
                 'heading' => 'E-commerce stores',
                 'subheading' => 'Sell online 24/7',
-                'content' => '<p class="mb-4">I create functional online stores that help you sell products online. I integrate popular payment and delivery systems.</p><p class="mb-4">Every store comes with an intuitive admin panel for managing products, orders, and customers.</p>',
+                'content' => '<p class="mb-4">I create functional online stores that help you sell products online. I integrate popular payment and delivery systems.</p><p class="mb-4">Every store comes with an intuitive admin panel for managing products, orders, and customers.</p><p class="mb-4"><strong>I offer ongoing technical support for your store.</strong> I take care of updates, security and proper functioning. I respond quickly to reports and help solve problems.</p>',
                 'features' => [
                     'Product management',
                     'Payment integration (Stripe, PayPal)',
@@ -105,12 +95,14 @@ return [
                     'Shopping cart & checkout',
                     'Admin panel',
                     'Sales reports',
+                    'Technical support included',
+                    '...and everything you need',
                 ],
             ],
             'webapps' => [
                 'heading' => 'Web applications',
-                'subheading' => 'Custom solutions for your business',
-                'content' => '<p class="mb-4">I design and build custom web applications tailored to your company\'s specific needs. From simple tools to complex management systems.</p><p class="mb-4">I use modern technologies that guarantee security, performance, and scalability.</p>',
+                'subheading' => 'Custom web solutions for your business',
+                'content' => '<p class="mb-4">I design and build custom web applications tailored to your company\'s specific needs. From simple tools to complex management systems.</p><p class="mb-4">I use modern technologies that guarantee security, performance, and scalability.</p><p class="mb-4"><strong>I offer ongoing technical support for your application.</strong> I take care of updates, security and proper functioning. I respond quickly to reports and help solve problems.</p>',
                 'features' => [
                     'Custom design',
                     'User panel',
@@ -118,45 +110,8 @@ return [
                     'Database',
                     'Authorization & permissions',
                     'Technical documentation',
-                ],
-            ],
-            'seo' => [
-                'heading' => 'SEO optimization',
-                'subheading' => 'Be visible on Google',
-                'content' => '<p class="mb-4">I optimize websites for search engines so your site is visible to potential customers looking for your services.</p><p class="mb-4">I conduct SEO audits, optimize content and site structure, and build link profiles.</p>',
-                'features' => [
-                    'SEO audit',
-                    'Content optimization',
-                    'Technical optimization',
-                    'Link building',
-                    'Position reporting',
-                    'Google Analytics & Search Console',
-                ],
-            ],
-            'responsive' => [
-                'heading' => 'Responsiveness',
-                'subheading' => 'Perfect display on every device',
-                'content' => '<p class="mb-4">Every website I create looks perfect on all devices - computers, tablets, and smartphones.</p><p class="mb-4">I use a mobile-first approach, which guarantees the best experience for mobile users.</p>',
-                'features' => [
-                    'Mobile-first design',
-                    'Cross-device testing',
-                    'Loading speed optimization',
-                    'Touch-friendly interface',
-                    'Responsive images',
-                    'WCAG accessibility',
-                ],
-            ],
-            'support' => [
-                'heading' => 'Technical support',
-                'subheading' => 'You can always count on me',
-                'content' => '<p class="mb-4">I offer ongoing technical support for your website. I take care of updates, security, and proper functioning.</p><p class="mb-4">I respond quickly to reports and help solve problems.</p>',
-                'features' => [
-                    'Regular updates',
-                    'Data backup',
-                    'Availability monitoring',
-                    'Email/phone support',
-                    'Minor fixes included',
-                    'Monthly reports',
+                    'Technical support included',
+                    '...and everything you need',
                 ],
             ],
         ],
@@ -243,6 +198,7 @@ return [
             'email_placeholder' => 'john@example.com',
             'phone' => 'Phone (optional)',
             'phone_placeholder' => '+1 234 567 890',
+            'subject' => 'Subject',
             'message' => 'Message',
             'message_placeholder' => 'Describe your project or ask a question...',
             'submit' => 'Send message',

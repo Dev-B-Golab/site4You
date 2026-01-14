@@ -57,7 +57,7 @@ return [
         'items' => [
             'websites' => [
                 'title' => 'Strony wizytówki',
-                'desc' => 'Profesjonalne strony prezentujące Twoją firmę. Idealne rozwiązanie aby pokazać się na szerszą skale.',
+                'desc' => 'Profesjonalne strony internetowe prezentujące Twoją firmę. Idealne rozwiązanie aby pokazać się na szerszą skale.',
             ],
             'ecommerce' => [
                 'title' => 'Sklepy internetowe',
@@ -65,26 +65,14 @@ return [
             ],
             'webapps' => [
                 'title' => 'Aplikacje webowe',
-                'desc' => 'Dedykowane rozwiązania dopasowane do Twoich potrzeb biznesowych. Od prostych narzędzi po złożone systemy.',
-            ],
-            'seo' => [
-                'title' => 'Pozycjonowanie SEO',
-                'desc' => 'Optymalizacja strony pod kątem wyszukiwarek, aby Twoja strona była widoczna dla potencjalnych klientów.',
-            ],
-            'responsive' => [
-                'title' => 'Responsywność',
-                'desc' => 'Każda strona wygląda idealnie na wszystkich urządzeniach - komputerach, tabletach i smartfonach.',
-            ],
-            'support' => [
-                'title' => 'Wsparcie techniczne',
-                'desc' => 'Ciągła opieka nad stroną, aktualizacje i pomoc techniczna.',
+                'desc' => 'Dedykowane aplikacje internetowe dopasowane do Twoich potrzeb biznesowych. Od prostych narzędzi po złożone systemy.',
             ],
         ],
         'details' => [
             'websites' => [
-                'heading' => 'Profesjonalne strony wizytówki',
+                'heading' => 'Profesjonalne strony internetowe',
                 'subheading' => 'Twoja firma w internecie',
-                'content' => '<p class="mb-4">Strona wizytówka to podstawa obecności Twojej firmy w internecie. Tworzę nowoczesne, responsywne strony, które skutecznie prezentują Twoją działalność i przyciągają nowych klientów.</p><p class="mb-4">Każda strona jest zoptymalizowana pod kątem SEO, dzięki czemu Twoi potencjalni klienci łatwo Cię znajdą w wyszukiwarce Google.</p>',
+                'content' => '<p class="mb-4">Strona internetowa to podstawa obecności Twojej firmy w sieci. Tworzę nowoczesne, responsywne strony www, które skutecznie prezentują Twoją działalność i przyciągają nowych klientów.</p><p class="mb-4">Każda strona internetowa jest zoptymalizowana pod kątem SEO, dzięki czemu Twoi potencjalni klienci łatwo Cię znajdą w wyszukiwarce Google.</p><p class="mb-4"><strong>Oferuję stałe wsparcie techniczne dla Twojej strony.</strong> Dbam o aktualizacje, bezpieczeństwo i poprawne działanie. Szybko reaguję na zgłoszenia i pomagam rozwiązywać problemy.</p>',
                 'features' => [
                     'Responsywny design (mobile-first)',
                     'Optymalizacja SEO',
@@ -92,12 +80,14 @@ return [
                     'Integracja z social media',
                     'Certyfikat SSL',
                     'Szkolenie z obsługi',
+                    'Wsparcie techniczne w cenie',
+                    '...oraz wszystko czego potrzebujesz',
                 ],
             ],
             'ecommerce' => [
                 'heading' => 'Sklepy internetowe',
-                'subheading' => 'Sprzedawaj online 24/7',
-                'content' => '<p class="mb-4">Tworzę funkcjonalne sklepy internetowe, które pomagają w sprzedaży produktów online. Integruję popularne systemy płatności i dostawy.</p><p class="mb-4">Każdy sklep jest wyposażony w intuicyjny panel administracyjny do zarządzania produktami, zamówieniami i klientami.</p>',
+                'subheading' => 'Sprzedawaj online 24/7 - sklep www',
+                'content' => '<p class="mb-4">Tworzę funkcjonalne sklepy internetowe, które pomagają w sprzedaży produktów online. Integruję popularne systemy płatności i dostawy.</p><p class="mb-4">Każdy sklep internetowy jest wyposażony w intuicyjny panel administracyjny do zarządzania produktami, zamówieniami i klientami.</p><p class="mb-4"><strong>Oferuję stałe wsparcie techniczne dla Twojego sklepu.</strong> Dbam o aktualizacje, bezpieczeństwo i poprawne działanie. Szybko reaguję na zgłoszenia i pomagam rozwiązywać problemy.</p>',
                 'features' => [
                     'Zarządzanie produktami',
                     'Integracja płatności (PayU, Przelewy24)',
@@ -105,12 +95,14 @@ return [
                     'Koszyk i proces zamówień',
                     'Panel administracyjny',
                     'Raporty sprzedaży',
+                    'Wsparcie techniczne w cenie',
+                    '...oraz wszystko czego potrzebujesz',
                 ],
             ],
             'webapps' => [
                 'heading' => 'Aplikacje webowe',
                 'subheading' => 'Dedykowane rozwiązania dla Twojego biznesu',
-                'content' => '<p class="mb-4">Projektuję i tworzę dedykowane aplikacje webowe dopasowane do specyficznych potrzeb Twojej firmy. Od prostych narzędzi po złożone systemy zarządzania.</p><p class="mb-4">Wykorzystuję nowoczesne technologie, które gwarantują bezpieczeństwo, wydajność i skalowalność.</p>',
+                'content' => '<p class="mb-4">Projektuję i tworzę dedykowane aplikacje webowe dopasowane do specyficznych potrzeb Twojej firmy. Od prostych narzędzi po złożone systemy zarządzania.</p><p class="mb-4">Wykorzystuję nowoczesne technologie, które gwarantują bezpieczeństwo, wydajność i skalowalność.</p><p class="mb-4"><strong>Oferuję stałe wsparcie techniczne dla Twojej aplikacji.</strong> Dbam o aktualizacje, bezpieczeństwo i poprawne działanie. Szybko reaguję na zgłoszenia i pomagam rozwiązywać problemy.</p>',
                 'features' => [
                     'Indywidualny projekt',
                     'Panel użytkownika',
@@ -118,45 +110,8 @@ return [
                     'Baza danych',
                     'Autoryzacja i uprawnienia',
                     'Dokumentacja techniczna',
-                ],
-            ],
-            'seo' => [
-                'heading' => 'Pozycjonowanie SEO',
-                'subheading' => 'Bądź widoczny w Google',
-                'content' => '<p class="mb-4">Optymalizacja dla wyszukiwarek jest kluczową funkcją dla strony internetowej aby była widoczna dla potencjalnych klientów.</p><p class="mb-4">Przeprowadzam audyt SEO, optymalizuję treści i strukturę strony oraz buduję profil linków.</p>',
-                'features' => [
-                    'Audyt SEO',
-                    'Optymalizacja treści',
-                    'Optymalizacja techniczna',
-                    'Link building',
-                    'Raportowanie pozycji',
-                    'Google Analytics & Search Console',
-                ],
-            ],
-            'responsive' => [
-                'heading' => 'Responsywność',
-                'subheading' => 'Idealna prezentacja na każdym urządzeniu',
-                'content' => '<p class="mb-4">Rozumiem jak ważna jest responsywność strony internetowej w czasach kiedy większość osób korzysta z urządzeń mobilnych.</p><p class="mb-4">Moje strony są projektowane z myślą o wszystkich typach urządzeń, zapewniając doskonałe doświadczenia użytkownikom na każdym ekranie.</p>',
-                'features' => [
-                    'Design mobile-first',
-                    'Testy na różnych urządzeniach',
-                    'Optymalizacja szybkości ładowania',
-                    'Touch-friendly interface',
-                    'Responsywne obrazy',
-                    'Dostępność WCAG',
-                ],
-            ],
-            'support' => [
-                'heading' => 'Wsparcie techniczne',
-                'subheading' => 'Zawsze możesz na mnie liczyć',
-                'content' => '<p class="mb-4">Oferuję stałe wsparcie techniczne dla Twojej strony. Dbam o aktualizacje, bezpieczeństwo i poprawne działanie.</p><p class="mb-4">Szybko reaguję na zgłoszenia i pomagam rozwiązywać problemy.</p>',
-                'features' => [
-                    'Regularne aktualizacje',
-                    'Backup danych',
-                    'Monitoring dostępności',
-                    'Wsparcie email/telefon',
-                    'Drobne poprawki w cenie',
-                    'Raporty miesięczne',
+                    'Wsparcie techniczne w cenie',
+                    '...oraz wszystko czego potrzebujesz',
                 ],
             ],
         ],
@@ -243,6 +198,7 @@ return [
             'email_placeholder' => 'jan@example.com',
             'phone' => 'Telefon (opcjonalnie)',
             'phone_placeholder' => '+48 123 456 789',
+            'subject' => 'Temat',
             'message' => 'Wiadomość',
             'message_placeholder' => 'Opisz swój projekt lub zadaj pytanie...',
             'submit' => 'Wyślij wiadomość',

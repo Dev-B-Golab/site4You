@@ -18,9 +18,6 @@
                 ['icon' => 'bi-window', 'key' => 'websites'],
                 ['icon' => 'bi-cart3', 'key' => 'ecommerce'],
                 ['icon' => 'bi-code-square', 'key' => 'webapps'],
-                ['icon' => 'bi-search', 'key' => 'seo'],
-                ['icon' => 'bi-phone', 'key' => 'responsive'],
-                ['icon' => 'bi-gear', 'key' => 'support'],
             ] as $index => $service)
             <article class="col-md-6 col-lg-4" role="listitem">
                 <x-card 
@@ -44,6 +41,4 @@
 </section>
 
 {{-- PODGLĄD SZABLONÓW --}}
-<section id="templates">
-    @include('sections.templates-preview')
-</section>
+@include('sections.templates-preview')

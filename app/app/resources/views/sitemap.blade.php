@@ -9,7 +9,7 @@
     </url>
     
     {{-- Podstrony usług --}}
-    @foreach(['websites', 'ecommerce', 'webapps', 'seo', 'responsive', 'support'] as $service)
+    @foreach(['websites', 'ecommerce', 'webapps'] as $service)
     <url>
         <loc>{{ route('service.show', $service) }}</loc>
         <lastmod>{{ now()->toDateString() }}</lastmod>

@@ -3,7 +3,7 @@
     Wyświetla interaktywny podgląd szablonów z przełączaniem urządzeń
 --}}
 
-<div class="templates-preview-section">
+<section id="templates" class="templates-preview-section">
     <div class="container">
         <x-section-header 
             :title="__('site.templates.title')"

@@ -116,3 +116,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+/**
+ * Protected Contact Links
+ * Zamienia tekst kontaktów na klikalne linki
+ * Email i telefony są wyświetlane jako tekst, ale po kliknięciu działają
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    // Klikalne emaile
+    document.querySelectorAll('.protected-email').forEach(function(el) {
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', function() {
+            const user = this.dataset.user.split('').reverse().join('');
+            const domain = this.dataset.domain.split('').reverse().join('');
+            window.location.href = 'mailto:' + user + '@' + domain;
+        });
+    });
+    
+    // Klikalne telefony
+    document.querySelectorAll('.protected-phone').forEach(function(el) {
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', function() {
+            const phone = this.dataset.phone.split('').reverse().join('').replace(/\s/g, '');
+            window.location.href = 'tel:' + phone;
+        });
+    });
+});

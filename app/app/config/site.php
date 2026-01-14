@@ -17,6 +17,7 @@ return [
     'name' => 'WebsiteForYou',
     'email' => 'golabwebdev@gmail.com',
     'phone' => '+48 451 079 977',
+    'phone2' => '+48 516 307 696',
     'address' => 'Krosno, Polska',
     'description' => 'Tworzę nowoczesne strony internetowe, które pomagają firmom rozwijać się w świecie cyfrowym.',
 

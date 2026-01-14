@@ -1,26 +1,68 @@
 @extends('layouts.app')
 
-@section('title', config('site.name') . ' - Profesjonalne Tworzenie Stron Internetowych')
+@section('title', 'Strony internetowe Krosno, Podkarpacie | Tanie strony www - ' . config('site.name'))
 
-@section('meta_description', 'Tworzenie stron internetowych, sklepów online i aplikacji webowych. Nowoczesne, responsywne i zoptymalizowane pod SEO. Krosno i cała Polska.')
+@section('meta_description', 'Tanie strony internetowe Krosno, Podkarpacie. Tworzenie stron www, sklepów internetowych i aplikacji webowych. Profesjonalne, responsywne strony dla firm.')
 
-@section('meta_keywords', 'tworzenie stron internetowych, strony www Krosno, sklepy internetowe, aplikacje webowe, SEO, responsywne strony, webdeveloper Krosno')
+@section('meta_keywords', 'strony internetowe, tanie strony internetowe, strony internetowe krosno, strony internetowe podkarpacie, strony www, sklep internetowy, tworzenie stron, webdeveloper krosno')
 
 @section('schema')
 <script type="application/ld+json">
 {
     "@@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "{{ config('site.name') }} - Strona Główna",
-    "description": "Tworzenie stron internetowych, sklepów online i aplikacji webowych",
+    "@@type": "LocalBusiness",
+    "name": "{{ config('site.name') }}",
+    "description": "Tanie strony internetowe Krosno, Podkarpacie. Tworzenie profesjonalnych stron www, sklepów internetowych i aplikacji webowych.",
     "url": "{{ route('home') }}",
-    "mainEntity": {
-        "@type": "Service",
-        "name": "Tworzenie stron internetowych",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "{{ config('site.name') }}"
-        }
+    "telephone": "{{ config('site.phone') }}",
+    "email": "{{ config('site.email') }}",
+    "address": {
+        "@@type": "PostalAddress",
+        "addressLocality": "Krosno",
+        "addressRegion": "Podkarpackie",
+        "addressCountry": "PL"
+    },
+    "areaServed": [
+        {"@@type": "City", "name": "Krosno"},
+        {"@@type": "State", "name": "Podkarpackie"},
+        {"@@type": "Country", "name": "Polska"}
+    ],
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "sameAs": [
+        "{{ config('site.social.instagram') }}",
+        "{{ config('site.social.linkedin') }}",
+        "{{ config('site.social.github') }}"
+    ],
+    "hasOfferCatalog": {
+        "@@type": "OfferCatalog",
+        "name": "Usługi tworzenia stron internetowych",
+        "itemListElement": [
+            {
+                "@@type": "Offer",
+                "itemOffered": {
+                    "@@type": "Service",
+                    "name": "Strony internetowe",
+                    "description": "Profesjonalne strony internetowe dla firm"
+                }
+            },
+            {
+                "@@type": "Offer",
+                "itemOffered": {
+                    "@@type": "Service",
+                    "name": "Sklepy internetowe",
+                    "description": "Funkcjonalne sklepy e-commerce"
+                }
+            },
+            {
+                "@@type": "Offer",
+                "itemOffered": {
+                    "@@type": "Service",
+                    "name": "Aplikacje webowe",
+                    "description": "Dedykowane aplikacje internetowe"
+                }
+            }
+        ]
     }
 }
 </script>

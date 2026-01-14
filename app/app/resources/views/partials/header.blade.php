@@ -32,7 +32,7 @@
                             </a>
                         </li>
                         <li><hr class="dropdown-divider"></li>
-                        @foreach(['websites', 'ecommerce', 'webapps', 'seo', 'responsive', 'support'] as $serviceKey)
+                        @foreach(['websites', 'ecommerce', 'webapps'] as $serviceKey)
                         <li>
                             <a class="dropdown-item" href="{{ route('service.show', $serviceKey) }}">
                                 {{ __('site.services.items.' . $serviceKey . '.title') }}

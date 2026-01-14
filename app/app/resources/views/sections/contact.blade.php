@@ -4,7 +4,7 @@
     Używa komponentów: x-section-header, x-icon-text, x-alert, x-button, x-form-input
 --}}
 
-<section id="contact">
+<section id="contact" class="bg-darker">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
@@ -26,6 +26,11 @@
                     icon="bi-phone" 
                     :label="__('site.contact.labels.phone')" 
                     :value="config('site.phone')" 
+                    class="mb-2" />
+                <x-icon-text 
+                    icon="bi-phone" 
+                    :label="__('site.contact.labels.phone')" 
+                    :value="config('site.phone2')" 
                     class="mb-3" />
                 <x-icon-text 
                     icon="bi-geo-alt" 
@@ -41,6 +46,11 @@
                 {{-- FORMULARZ KONTAKTOWY --}}
                 <form action="{{ route('contact.submit') }}" method="POST">
                     @csrf
+                    @php
+                        $serviceParam = request('service');
+                        $defaultSubject = $serviceParam ? 'Zapytanie o usługę: ' . $serviceParam : '';
+                        $defaultMessage = $serviceParam ? 'Dzień dobry, jestem zainteresowany/a usługą "' . $serviceParam . '". Proszę o kontakt w celu omówienia szczegółów.' : '';
+                    @endphp
                     <div class="row g-3">
                         <div class="col-md-6">
                             <x-form-input 
@@ -64,12 +74,22 @@
                                 :label="__('site.contact.form.phone')" 
                                 :placeholder="__('site.contact.form.phone_placeholder')" />
                         </div>
+                        @if($serviceParam)
+                        <div class="col-12">
+                            <x-form-input 
+                                name="subject" 
+                                :label="__('site.contact.form.subject')" 
+                                :value="$defaultSubject"
+                                :required="true" />
+                        </div>
+                        @endif
                         <div class="col-12">
                             <x-form-input 
                                 name="message" 
                                 type="textarea"
                                 :label="__('site.contact.form.message')" 
                                 :placeholder="__('site.contact.form.message_placeholder')" 
+                                :value="$defaultMessage"
                                 :required="true"
                                 :rows="5" />
                         </div>

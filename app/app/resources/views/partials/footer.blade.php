@@ -37,18 +37,25 @@
                     <li><a href="{{ route('service.show', 'websites') }}">{{ __('site.services.items.websites.title') }}</a></li>
                     <li><a href="{{ route('service.show', 'ecommerce') }}">{{ __('site.services.items.ecommerce.title') }}</a></li>
                     <li><a href="{{ route('service.show', 'webapps') }}">{{ __('site.services.items.webapps.title') }}</a></li>
-                    <li><a href="{{ route('service.show', 'seo') }}">{{ __('site.services.items.seo.title') }}</a></li>
-                    <li><a href="{{ route('service.show', 'responsive') }}">{{ __('site.services.items.responsive.title') }}</a></li>
-                    <li><a href="{{ route('service.show', 'support') }}">{{ __('site.services.items.support.title') }}</a></li>
                 </ul>
             </div>
             
-            {{-- KOLUMNA 4: Kontakt --}}
+            {{-- KOLUMNA 4: Kontakt (zabezpieczenie przed botami) --}}
             <div class="col-lg-3 col-md-4">
                 <h5 class="footer-title">{{ __('site.footer.contact') }}</h5>
                 <ul class="footer-contact">
-                    <li><i class="bi bi-envelope"></i> {{ config('site.email') }}</li>
-                    <li><i class="bi bi-phone"></i> {{ config('site.phone') }}</li>
+                    <li>
+                        <i class="bi bi-envelope"></i> 
+                        <span class="protected-email" data-user="vedbeweblog" data-domain="moc.liamg">golabwebdev@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-phone"></i> 
+                        <span class="protected-phone" data-phone="779 970 154 84+">+48 451 079 977</span>
+                    </li>
+                    <li>
+                        <i class="bi bi-phone"></i> 
+                        <span class="protected-phone" data-phone="696 703 615 84+">+48 516 307 696</span>
+                    </li>
                     <li><i class="bi bi-geo-alt"></i> {{ config('site.address') }}</li>
                 </ul>
                 {{-- SOCIAL MEDIA --}}

@@ -1,17 +1,13 @@
-# Robots.txt for Web 4 You
+# Robots.txt for WebsiteForYou
+# Strony internetowe Krosno, Podkarpacie - tanie strony www
 
 User-agent: *
 Allow: /
 
-# Disallow admin and system areas
+# Disallow system areas
 Disallow: /admin/
 Disallow: /storage/
 Disallow: /vendor/
-Disallow: /*.json$
-Disallow: /*.xml$
 
-# Allow sitemap
-Allow: /sitemap.xml
-
-# Crawl-delay (optional - be nice to servers)
-Crawl-delay: 1
+# Sitemap
+Sitemap: https://websiteforyou.pl/sitemap.xml
