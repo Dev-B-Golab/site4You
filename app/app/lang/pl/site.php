@@ -203,6 +203,7 @@ return [
             'message_placeholder' => 'Opisz swój projekt lub zadaj pytanie...',
             'submit' => 'Wyślij wiadomość',
             'success' => 'Dziękujemy za wiadomość! Skontaktujemy się wkrótce.',
+            'rate_limit' => 'Zbyt wiele wiadomości. Spróbuj ponownie za :minutes minut.',
         ],
         'success_page' => [
             'title' => 'Wiadomość wysłana',

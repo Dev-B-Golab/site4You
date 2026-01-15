@@ -337,15 +337,12 @@
             padding: 1.5rem;
             background: var(--light);
             text-align: center;
+            overflow: hidden;
         }
         .product-image img {
             max-width: 100%;
             height: 180px;
             object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-        .product-card:hover .product-image img {
-            transform: scale(1.05);
         }
         .product-badge {
             position: absolute;
@@ -353,6 +350,7 @@
             left: 1rem;
             padding: 0.3rem 0.75rem;
             border-radius: 50px;
+            z-index: 10;
             font-size: 0.75rem;
             font-weight: 600;
         }

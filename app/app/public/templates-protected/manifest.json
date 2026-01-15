@@ -1,0 +1,23 @@
+{
+    "generated": "2026-01-15T08:12:45+00:00",
+    "version": "1.0.0",
+    "encryptionType": "XOR+Base64",
+    "templates": [
+        {
+            "name": "business",
+            "file": "business.html"
+        },
+        {
+            "name": "ecommerce",
+            "file": "ecommerce.html"
+        },
+        {
+            "name": "portfolio",
+            "file": "portfolio.html"
+        },
+        {
+            "name": "restaurant",
+            "file": "restaurant.html"
+        }
+    ]
+}

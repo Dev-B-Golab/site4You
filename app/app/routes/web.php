@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TemplateController;
 
 // Strona główna (domyślnie PL)
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -48,3 +49,31 @@ Route::get('/sitemap.xml', function () {
         ->view('sitemap')
         ->header('Content-Type', 'application/xml');
 })->name('sitemap');
+
+// =====================================================
+// PROTECTED TEMPLATES API
+// =====================================================
+Route::prefix('api/templates')->group(function () {
+    // Generowanie tokenu dostępu
+    Route::post('/token', [TemplateController::class, 'generateToken'])
+        ->name('templates.token');
+    
+    // Bezpieczne pobieranie szablonu (HTML)
+    Route::get('/{template}', [TemplateController::class, 'show'])
+        ->name('templates.show');
+    
+    // Pobieranie zaszyfrowanego szablonu (JSON)
+    Route::get('/{template}/encrypted', [TemplateController::class, 'getEncrypted'])
+        ->name('templates.encrypted');
+});
+
+// Podgląd szablonów z zabezpieczeniami
+Route::get('/preview/templates/{template}', function ($template) {
+    $validTemplates = ['business', 'portfolio', 'restaurant', 'ecommerce'];
+    
+    if (!in_array($template, $validTemplates)) {
+        abort(404);
+    }
+    
+    return view('templates.preview', ['template' => $template]);
+})->name('templates.preview');

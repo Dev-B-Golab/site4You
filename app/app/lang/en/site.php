@@ -203,6 +203,7 @@ return [
             'message_placeholder' => 'Describe your project or ask a question...',
             'submit' => 'Send message',
             'success' => 'Thank you for your message! We\'ll get back to you soon.',
+            'rate_limit' => 'Too many messages. Please try again in :minutes minutes.',
         ],
         'success_page' => [
             'title' => 'Message Sent',

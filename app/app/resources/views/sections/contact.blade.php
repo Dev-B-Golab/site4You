@@ -43,9 +43,23 @@
                     <x-alert type="success" :message="__('site.contact.form.success')" class="mb-4" />
                 @endif
 
+                {{-- ALERT RATE LIMIT --}}
+                @error('rate_limit')
+                    <x-alert type="danger" :message="$message" class="mb-4" />
+                @enderror
+
                 {{-- FORMULARZ KONTAKTOWY --}}
                 <form action="{{ route('contact.submit') }}" method="POST">
                     @csrf
+                    
+                    {{-- ANTI-SPAM: Honeypot (ukryte pole - boty je wypełnią) --}}
+                    <div style="position: absolute; left: -9999px;" aria-hidden="true">
+                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    
+                    {{-- ANTI-SPAM: Timestamp (sprawdza czy formularz wypełniono zbyt szybko) --}}
+                    <input type="hidden" name="_form_time" value="{{ time() }}">
+                    
                     @php
                         $serviceParam = request('service');
                         $defaultSubject = $serviceParam ? 'Zapytanie o usługę: ' . $serviceParam : '';
